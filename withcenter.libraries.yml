@@ -26,5 +26,3 @@ mall_philgo:
       templates/mall_philgo/css/theme.css: {}
   js:
     templates/mall_philgo/js/mall_philgo.js: {}
-
-mall_sonub:
