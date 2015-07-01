@@ -16,11 +16,12 @@ footer .copyright{
 	padding:0 40px;
 	margin:auto;
 	box-sizing:border-box;
-	text-align:right;
+	text-align:center;
+	font-size:.8em;
 }
 
 footer .copyright .text{
-	margin-right:40px;
+	padding:2px 0;
 }
 
 footer .copyright .footer-photo{
