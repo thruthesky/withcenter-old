@@ -1,0 +1,87 @@
+{% set items = mall_top.items %}
+{% set total_items = items | length %}
+<div class='top-items banner'>	
+	<div class='inner'>
+	<div class='arrow left'><img src='/themes/withcenter/templates/mall_sonub/img/top_arrow_left.png'/></div>
+	<div class='arrow right'><img src='/themes/withcenter/templates/mall_sonub/img/top_arrow_right.png'/></div>
+		{% if ( items | length ) > 2 %}
+			{% for i in ( total_items - 2 )..( total_items - 1 )%}
+				{% set item = items[i].entity %}
+				{% set images = items[i].images %}
+				{% set price = items[i].rendered_price %}				
+				<a href='/mall/item/view?item_id={{ item.id.value }}'>
+					<div class='item clearfix'>						
+						<div class='photo'>
+						<img class='fake 'src='/themes/mall_philgo/img/mall_top_fake.png'/>
+						{% if images.item_image_thumbnail[0] %}
+							{% set url_thumb = images.item_image_thumbnail[0].url_large %}
+						{% else %}
+							{% set url_thumb = '/themes/mall_philgo/img/mall-no-image.png' %}
+						{% endif %}
+							<img src='{{ url_thumb }}'/>												
+						</div>
+						<div class='info'>
+							<div class='title'>{{ item.title.value }}</div>
+							<div class='price'>{{ price }}</div>
+							<div class='category-label'>
+								<img src='/themes/mall_philgo/img/left/{{ items[i].category_root.name.value | lower }}.png'/>
+							</div>
+						</div>						
+					</div>
+				</a>
+			{% endfor %}
+		{% endif %}
+		{% for i in items %}
+			{% set item = i.entity %}
+			{% set images = i.images %}
+			{% set price = i.rendered_price %}
+			<a href='/mall/item/view?item_id={{ item.id.value }}'>
+				<div class='item clearfix' page='{{ loop.index }}'>					
+					<div class='photo'>
+					<img class='fake 'src='/themes/mall_philgo/img/mall_top_fake.png'/>
+					{% if images.item_image_thumbnail[0] %}
+						{% set url_thumb = images.item_image_thumbnail[0].url_large %}
+					{% else %}
+						{% set url_thumb = '/themes/mall_philgo/img/mall-no-image.png' %}
+					{% endif %}
+						<img src='{{ url_thumb }}'/>												
+					</div>
+					<div class='info'>
+						<div class='title'>{{ item.title.value }}</div>						
+						<div class='price'>{{ price }}</div>
+						<div class='category-label'>
+							<img src='/themes/mall_philgo/img/left/{{ i.category_root.name.value | lower }}.png'/>
+						</div>
+					</div>						
+				</div>
+			</a>
+		{% endfor %}
+		{% if ( items | length ) > 2 %}	
+			{% for i in 0..1%}
+				{% set item = items[i].entity %}
+				{% set images = items[i].images %}
+				{% set price = items[i].rendered_price %}
+				<a href='/mall/item/view?item_id={{ item.id.value }}'>
+					<div class='item clearfix'>						
+						<div class='photo'>
+						<img class='fake 'src='/themes/mall_philgo/img/mall_top_fake.png'/>
+						{% if images.item_image_thumbnail[0] %}
+							{% set url_thumb = images.item_image_thumbnail[0].url_large %}
+						{% else %}
+							{% set url_thumb = '/themes/mall_philgo/img/mall-no-image.png' %}
+						{% endif %}
+							<img src='{{ url_thumb }}'/>												
+						</div>
+						<div class='info'>
+							<div class='title'>{{ item.title.value }}</div>
+							<div class='price'>{{ price }}</div>
+							<div class='category-label'>
+								<img src='/themes/mall_philgo/img/left/{{ items[i].category_root.name.value | lower }}.png'/>
+							</div>
+						</div>						
+					</div>
+				</a>
+			{% endfor %}
+		{% endif %}
+	</div>
+</div>

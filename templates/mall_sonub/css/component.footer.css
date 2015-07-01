@@ -1,0 +1,38 @@
+/*footer*/
+
+footer{
+	padding: 8px 0;
+	border-top:2px solid #b9b9b9;
+	border-bottom:2px solid #b9b9b9;
+	background-color:#dddddd;
+	font-size:1.3em;
+	/*override*/
+	max-width:none;
+	/*override*/
+}
+
+footer .copyright{
+	max-width:960px;
+	padding:0 40px;
+	margin:auto;
+	box-sizing:border-box;
+	text-align:center;
+	font-size:.8em;
+}
+
+footer .copyright .text{
+	padding:2px 0;
+}
+
+footer .copyright .footer-photo{
+	height: 70px;	
+	padding-left:23px;
+	margin-left:15px;
+	border-left: 2px solid #b9b9b9;
+}
+
+footer .copyright img{
+	display:block;	
+	padding:10px 0;
+}
+/*eo footer*/

@@ -1,18 +1,26 @@
-{{ attach_library('withcenter/'~sub_theme) }}
-<section role="layout" class="layout">
-    <header class="header">
-        {% include dir_sub_theme ~ '/header.top.html.twig' %}
-        {% include dir_sub_theme ~ '/header.logo-search.html.twig' %}
-        {% include dir_sub_theme ~ '/header.menu.html.twig' %}
-    </header>
-    <section class="content">
-        {% if is_front %}
-            {% include dir_sub_theme ~ '/first-page.html.twig' %}
-        {% else %}
-            {{ page.content }}
-        {% endif %}
-    </section>
-    <footer class="footer">
-        {% include dir_sub_theme ~ '/footer.html.twig' %}
-    </footer>
-</section>
+{#
+Note by benjamin
+Added this if condition because if the dir_sub_theme is blank, it causes white space error
+#}
+{% if dir_sub_theme %}
+	{{ attach_library('withcenter/'~sub_theme) }}
+	<section role="layout" class="layout">
+		<header class="header">
+			{% include dir_sub_theme ~ '/header.top.html.twig' %}
+			{% include dir_sub_theme ~ '/header.logo-search.html.twig' %}
+			{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+		</header>
+		<section class="content">
+			{% if is_front %}
+				{% include dir_sub_theme ~ '/first-page.html.twig' %}
+			{% else %}
+				{{ page.content }}
+			{% endif %}
+		</section>
+		<footer class="footer">
+			{% include dir_sub_theme ~ '/footer.html.twig' %}
+		</footer>
+	</section>
+{% else %}
+	 {{ page.content }}
+{% endif %}
