@@ -1,0 +1,30 @@
+default:
+  version: 1.x
+  css:
+    theme:
+      css/base.css: {}
+      css/layout.css: {}
+      css/component-grid.css: {}
+      css/state.css: {}
+  js:
+    js/default.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/jquery.ui
+
+
+mall_philgo:
+  version: 1.x
+  css:
+    theme:
+      templates/mall_philgo/css/component.header-top.css: {}
+      templates/mall_philgo/css/component.header-content.css: {}
+      templates/mall_philgo/css/component.header-menu.css: {}
+      templates/mall_philgo/css/component.footer.css: {}
+      templates/mall_philgo/css/component.front-page.css: {}
+      templates/mall_philgo/css/theme.css: {}
+  js:
+    templates/mall_philgo/js/mall_philgo.js: {}
+
+mall_sonub:

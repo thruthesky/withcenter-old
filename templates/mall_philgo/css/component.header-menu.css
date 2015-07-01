@@ -1,0 +1,28 @@
+header .menu {
+    margin-bottom:2px;
+    font-family: 'Malgun Gothic','AppleGothic', Arial, Helvetica, sans-serif;
+}
+
+header .menu .items {
+    height:38px;
+    overflow:hidden;
+}
+header .menu a {
+    color:white;
+}
+
+header .menu a:hover {
+    color:yellow;
+}
+
+
+header .menu span {
+    display:block;
+    float:left;
+    padding:10px 8px 0;
+}
+
+
+header .mall-item-add {
+    color:yellow;
+}

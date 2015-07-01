@@ -1,0 +1,9 @@
+name: Withcenter Theme
+type: theme
+description: Withcenter Multi Theme
+core: 8.x
+libraries:
+  - withcenter/default
+features:
+  - favicon
+screenshot: screenshot.png
