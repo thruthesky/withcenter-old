@@ -1,3 +1,7 @@
+.layout > header{/*this is inside component.header-menu.css*/
+	margin-bottom:10px;
+}
+
 /**                       HEADER MENU */
 .layout > header table.menu-table {    
     background-color: #353535;
