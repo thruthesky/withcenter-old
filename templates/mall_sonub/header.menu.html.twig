@@ -1,1 +1,181 @@
-this is menu.
+<table class='menu-table' width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="logo">
+            <a href="/">
+                <div class="item">
+                    <div class="sprite"></div>
+                </div>
+            </a>
+        </td>
+
+        <td class="ask">
+            <a href="/ask">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        Ask
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="knowledge">
+            <a href="/knowledge">
+                <div class="item knowledge">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        Knowledge
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="discussion">
+            <a href="/discussion">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        Forum
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="market">
+            <a href="/market">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">Market</div>
+                </div>
+            </a>
+        </td>
+
+
+        <td class="fhm">
+            <a href="/fhm">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        FHM
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="news">
+            <a href="/news">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        News
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="music">
+            <a href="/music">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        Music
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="job">
+            <a href="/job">
+                <div class="item">
+                    <div class="sprite"></div>
+                    <div class="text">
+                        Jobs
+                    </div>
+                </div>
+            </a>
+        </td>
+
+        <td class="login">
+            {% if user_login %}
+                <a href="/page/{{ user.username }}">
+                    <div class="item user page">
+                        <div class="sprite">
+                            {% if user_photo_src %}
+                                <img src="{{ user_photo_src }}">
+                            {% else %}
+                                <img src="/{{ dir_sub_theme }}/img/primary-photo.png">
+                            {% endif %}
+                        </div>
+                        <div class="text">
+                            My Page
+                        </div>
+                    </div>
+                </a>
+            {% else %}
+                    <div class="item user signin">
+                        <div class="sprite"></div>
+                        <div class="text">
+                            Sign in
+                        </div>
+                    </div>
+            {% endif %}
+        </td>
+
+
+
+        <td class='more'>
+            <div class="item more">
+				<div class="sprite"></div>
+                <div class="text">
+                    More
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<nav class="menu" style="display: none;">
+    <ul>
+        <li>
+            {% if user.id %}
+                <a href="/user/accountUpdate"><span class="account-update">Account Update</span></a>
+            {% else %}
+                <span class="login">Sign in</span>
+            {% endif %}
+        </li>
+        <li>
+
+            {% if user.id %}
+                <a href="/user/logout"><span>Sign Out</span></a>
+            {% else %}
+                <a href="/user/newAccount"><span>Register</span></a>
+            {% endif %}
+
+        </li>
+        <li><a href="/ask"><span>Ask</span></a></li>
+        <li><a href="/knowledge"><span>Knowledge</span></a></li>
+        <li><a href="/discussion"><span>Forum</span></a></li>
+        <li><a href="/market"><span>Market</span></a></li>
+        <li><a href="/job"><span>Jobs</span></a></li>
+        <li><a href="/drama"><span>Drama</span></a></li>
+        <li><a href="/fhm"><span>FHM</span></a></li>
+        <li><a href="/news"><span>News</span></a></li>
+        <li><a href="/music"><span>Music</span></a></li>
+        <li><a href="/request"><span>Request & Inquiry</span></a></li>
+        <li><a href="/game"><span>Game</span></a></li>
+        <li><a href="/fun"><span>Fun</span></a></li>
+        <li><a href="/ads"><span>Advertisement</span></a></li>
+        <li><a href="/sitemap"><span>Sitemap</span></a></li>
+
+        <li>
+            <div class="copyright">
+                <div class="menu">
+                    <a href="/privacyPolicy">Privacy</a>
+                    <a href="/termsOfService">Terms</a>
+                </div>
+                <div class="company">
+                    <a href="#">Sonub (c) 2013 ~ {{ 'now'|date("Y") }}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

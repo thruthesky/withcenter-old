@@ -1,0 +1,74 @@
+.sprite {
+     display: inline-block;
+     background: url('/themes/withcenter/templates/mall_sonub/img/sonub-sprite.png?version=1');
+ }
+.logo .sprite {
+
+    background-position: 0 -24px;
+    width: 75px;
+    height: 25px;
+}
+.ask .sprite {
+    background-position: 0 0;
+    width: 15px;
+    height: 20px;
+}
+.knowledge .sprite {
+    background-position: -21px 0;
+    width: 25px;
+    height: 20px;
+}
+.discussion .sprite {
+    background-position: -49px 0;
+    width: 26px;
+    height: 20px;
+}
+
+
+.market .sprite {
+    background-position: -80px 0;
+    width: 28px;
+    height: 20px;
+}
+
+.fhm .sprite{
+    background-position: -112px 0;
+    width: 20px;
+    height: 20px;
+}
+.news .sprite {
+    background-position: -137px 0;
+    width: 21px;
+    height: 20px;
+}
+
+.music .sprite {
+
+    background-position: -163px 0;
+    width: 20px;
+    height: 20px;
+}
+
+.job .sprite{
+    background-position: -188px 0;
+    width: 23px;
+    height: 20px;
+}
+
+.search .sprite{
+    background-position: -216px 0;
+    width: 20px;
+    height: 20px;
+}
+
+.login .sprite {
+    background-position: -372px 0;
+    width: 24px;
+    height: 24px;
+}
+
+.more .sprite {
+   background-position: -79px -65px;
+    width: 28px;
+    height: 20px;
+}
