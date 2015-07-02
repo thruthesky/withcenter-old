@@ -1,4 +1,4 @@
 .layout > header{/*this is inside theme.css*/
-	max-width:initial;
+	max-width:none;
 	margin-bottom:10px;
 }

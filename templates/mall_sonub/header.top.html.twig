@@ -1,134 +1,136 @@
 <div class='top'>
-	<table class='menu-table' width="100%" cellpadding="0" cellspacing="0">
-		<tr>
-			<td class="logo">
-				<a href="/">
-					<div class="item">
-						<div class="sprite"></div>
-					</div>
-				</a>
-			</td>
-
-			<td class="ask">
-				<a href="/ask">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							Ask
+	<div class='inner'>
+		<table class='menu-table' width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="logo">
+					<a href="/">
+						<div class="item">
+							<div class="sprite"></div>
 						</div>
-					</div>
-				</a>
-			</td>
+					</a>
+				</td>
 
-			<td class="knowledge">
-				<a href="/knowledge">
-					<div class="item knowledge">
-						<div class="sprite"></div>
-						<div class="text">
-							Knowledge
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="discussion">
-				<a href="/discussion">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							Forum
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="market">
-				<a href="/market">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">Market</div>
-					</div>
-				</a>
-			</td>
-
-
-			<td class="fhm">
-				<a href="/fhm">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							FHM
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="news">
-				<a href="/news">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							News
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="music">
-				<a href="/music">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							Music
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="job">
-				<a href="/job">
-					<div class="item">
-						<div class="sprite"></div>
-						<div class="text">
-							Jobs
-						</div>
-					</div>
-				</a>
-			</td>
-
-			<td class="login">
-				{% if user_login %}
-					<a href="/page/{{ user.username }}">
-						<div class="item user page">
-							<div class="sprite">
-								{% if user_photo_src %}
-									<img src="{{ user_photo_src }}">
-								{% else %}
-									<img src="/{{ dir_sub_theme }}/img/primary-photo.png">
-								{% endif %}
-							</div>
+				<td class="ask">
+					<a href="/ask">
+						<div class="item">
+							<div class="sprite"></div>
 							<div class="text">
-								My Page
+								Ask
 							</div>
 						</div>
 					</a>
-				{% else %}
-						<div class="item user signin">
+				</td>
+
+				<td class="knowledge">
+					<a href="/knowledge">
+						<div class="item knowledge">
 							<div class="sprite"></div>
 							<div class="text">
-								Sign in
+								Knowledge
 							</div>
 						</div>
-				{% endif %}
-			</td>
-			<td class='more'>
-				<div class="item more">
-					<div class="sprite"></div>
-					<div class="text">
-						More
+					</a>
+				</td>
+
+				<td class="discussion">
+					<a href="/discussion">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								Forum
+							</div>
+						</div>
+					</a>
+				</td>
+
+				<td class="market">
+					<a href="/market">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">Market</div>
+						</div>
+					</a>
+				</td>
+
+
+				<td class="fhm">
+					<a href="/fhm">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								FHM
+							</div>
+						</div>
+					</a>
+				</td>
+
+				<td class="news">
+					<a href="/news">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								News
+							</div>
+						</div>
+					</a>
+				</td>
+
+				<td class="music">
+					<a href="/music">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								Music
+							</div>
+						</div>
+					</a>
+				</td>
+
+				<td class="job">
+					<a href="/job">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								Jobs
+							</div>
+						</div>
+					</a>
+				</td>
+
+				<td class="login">
+					{% if user_login %}
+						<a href="/page/{{ user.username }}">
+							<div class="item user page">
+								<div class="sprite">
+									{% if user_photo_src %}
+										<img src="{{ user_photo_src }}">
+									{% else %}
+										<img src="/{{ dir_sub_theme }}/img/primary-photo.png">
+									{% endif %}
+								</div>
+								<div class="text">
+									My Page
+								</div>
+							</div>
+						</a>
+					{% else %}
+							<div class="item user signin">
+								<div class="sprite"></div>
+								<div class="text">
+									Sign in
+								</div>
+							</div>
+					{% endif %}
+				</td>
+				<td class='more'>
+					<div class="item more">
+						<div class="sprite"></div>
+						<div class="text">
+							More
+						</div>
 					</div>
-				</div>
-			</td>
-		</tr>
-	</table>
+				</td>
+			</tr>
+		</table>
+	</div>
 </div>
