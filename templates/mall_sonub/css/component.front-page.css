@@ -25,10 +25,9 @@ img.fake{
 }
 
 .top-items.banner .inner{
-	position:relative;
+	position:relative;	
 	max-width:960px;	
-	margin:auto;
-	white-space:nowrap;
+	margin:auto;	
 	overflow:hidden;
 }
 
