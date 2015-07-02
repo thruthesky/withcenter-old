@@ -32,7 +32,7 @@ mall_sonub:
   css:
     theme:
       templates/mall_sonub/css/component.header-top.css: {}
-      templates/mall_sonub/css/component.header-content.css: {}
+      templates/mall_sonub/css/component.logo-and-search.css: {}
       templates/mall_sonub/css/component.header-menu.css: {}
       templates/mall_sonub/css/component.footer.css: {}
       templates/mall_sonub/css/component.front-page.css: {}

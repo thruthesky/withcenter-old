@@ -1,0 +1,4 @@
+.layout > header{/*this is inside theme.css*/
+	max-width:initial;
+	margin-bottom:10px;
+}

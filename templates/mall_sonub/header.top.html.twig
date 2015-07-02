@@ -1,30 +1,134 @@
-<nav class="top">
-    <div class="left">
-        <a href="http://www.philgo.com" target="_blank">{{ language == 'ko' ? '필고 홈' : 'PhilGo' }}</a>
-        <span class="dot">•</span>
-        {% if logged_in %}
-            <a href="/user/logout">{{ language == 'ko' ? '로그아웃' : 'Logout' }}</a>
-        {% else %}
-            <a href="/user/login">{{ language == 'ko' ? '로그인' : 'Login' }}</a>
-        {% endif %}
-        <span class="dot">•</span>
+<div class='top'>
+	<table class='menu-table' width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td class="logo">
+				<a href="/">
+					<div class="item">
+						<div class="sprite"></div>
+					</div>
+				</a>
+			</td>
 
-        {% if logged_in %}
-            <a href="/mall/member/register">{{ language == 'ko' ? '정보변경' : 'Account Update' }}</a>
-        {% else %}
-            <a href="/mall/member/register">{{ language == 'ko' ? '회원가입' : 'Register' }}</a>
-        {% endif %}
+			<td class="ask">
+				<a href="/ask">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							Ask
+						</div>
+					</div>
+				</a>
+			</td>
 
-        <span class="dot">•</span>
-        <a href="/post/discussion">{{ language == 'ko' ? '자유토론' : 'Discussion' }}</a>
-        <span class="dot">•</span>
-        <a href="/post/job">{{ language == 'ko' ? '구인구직' : 'Jobs' }}</a>
-    </div>
-    <div class="right">
-        <a href="https://www.philgo.com/?ad.intro" target="_blank">{{ language == 'ko' ? '광고문의' : 'Advertisement' }}</a>
-        <span class="dot">•</span>
-        <a href="https://www.philgo.com/?module=post&action=write&post_id=request_to_manager&option=request" target="_blank">{{ language == 'ko' ? '운영자 요청/문의' : 'Inquery' }}</a>
-        <span class="dot">•</span>
-        <a href="#">070-7529-1749</a>
-    </div>
-</nav>
+			<td class="knowledge">
+				<a href="/knowledge">
+					<div class="item knowledge">
+						<div class="sprite"></div>
+						<div class="text">
+							Knowledge
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="discussion">
+				<a href="/discussion">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							Forum
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="market">
+				<a href="/market">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">Market</div>
+					</div>
+				</a>
+			</td>
+
+
+			<td class="fhm">
+				<a href="/fhm">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							FHM
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="news">
+				<a href="/news">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							News
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="music">
+				<a href="/music">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							Music
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="job">
+				<a href="/job">
+					<div class="item">
+						<div class="sprite"></div>
+						<div class="text">
+							Jobs
+						</div>
+					</div>
+				</a>
+			</td>
+
+			<td class="login">
+				{% if user_login %}
+					<a href="/page/{{ user.username }}">
+						<div class="item user page">
+							<div class="sprite">
+								{% if user_photo_src %}
+									<img src="{{ user_photo_src }}">
+								{% else %}
+									<img src="/{{ dir_sub_theme }}/img/primary-photo.png">
+								{% endif %}
+							</div>
+							<div class="text">
+								My Page
+							</div>
+						</div>
+					</a>
+				{% else %}
+						<div class="item user signin">
+							<div class="sprite"></div>
+							<div class="text">
+								Sign in
+							</div>
+						</div>
+				{% endif %}
+			</td>
+			<td class='more'>
+				<div class="item more">
+					<div class="sprite"></div>
+					<div class="text">
+						More
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

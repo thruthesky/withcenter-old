@@ -250,7 +250,7 @@ img.fake{
 }
 
 .todays-pick section.grid.bottom .b .item-wrapper .item .photo img.fake{
-    position:initial;
+    position:relative;
 }
 
 .todays-pick section.grid.bottom .a .item{
