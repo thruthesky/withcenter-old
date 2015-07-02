@@ -1,28 +1,18 @@
 <div class="logo-and-search">
-	<table cellpadding=0 cellspacing=0 width='100%'>
-		<tr>
-			<td width='224'>
-				<a href="/"><img src="/themes/withcenter/templates/mall_sonub/img/sonub_market_logo.png"></a>
-			</td>
-			<td>
-				<form class="search">
-					<table cellpadding="0" cellspacing="0" width="100%">
-						<tr valign="top">
-							<td width="95%"><input type="text" name="keyword" placeholder="Search in Market(Product,Brand,Shops)"></td>
-							<td width="93">
-								<div class='submit-wrapper'>
-									<input type="submit" value="Search">
-								</div>
-							</td>
-						</tr>
-					</table>
-				</form>
-			</td>
-			<td>
-				<div class='advance-search'>
-					<a href='/mall/item/search'>Advance Search</a>
-				</div>
-			</td>
-		</tr>
-	</table>
+	<a href="/"><img src="/themes/withcenter/templates/mall_sonub/img/sonub_market_logo.png"></a>
+	<form class="search" action='/mall/item/search'>
+		<table cellpadding="0" cellspacing="0" width="100%">
+			<tr valign="top">
+				<td width="95%"><input type="text" name="keyword" placeholder="Search in Market(Product,Brand,Shops)"></td>
+				<td width="93">
+					<div class='submit-wrapper'>
+						<input type="submit" value="Search">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<div class='advance-search'>
+		<a href='/mall/item/search'>Advance Search</a>
+	</div>
 </div>

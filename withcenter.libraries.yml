@@ -38,6 +38,7 @@ mall_sonub:
       templates/mall_sonub/css/component.front-page.css: {}
       templates/mall_sonub/css/theme.css: {}
       templates/mall_sonub/css/sprite.css: {}
+      templates/mall_sonub/css/component.left-side-bar.css: {}
   js:
     templates/mall_sonub/js/mall_philgo.js: {}
 

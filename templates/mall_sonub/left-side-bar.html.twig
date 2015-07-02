@@ -1,0 +1,17 @@
+<div class='left-side-bar'>	
+	<div class='thumbnail-list'>
+		<div class='title'>Popular Posts</div>
+		{% for i in 1..4 %}
+		<div class='item clearfix' >
+			<div class='photo'><img src='/themes/withcenter/templates/mall_sonub/img/fake_data_image.png'/></div>
+			<div class='info'>This is just a sample data... fake info {{ i }}</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class='bulleted-list'>
+		<div class='title'>Latest Posts</div>
+		{% for i in 1..10 %}
+			<a href='#'>Fake data {{ i }}</a>
+		{% endfor %}
+	</div>
+</div>
