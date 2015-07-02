@@ -40,3 +40,4 @@ mall_sonub:
       templates/mall_sonub/css/sprite.css: {}
   js:
     templates/mall_sonub/js/mall_philgo.js: {}
+
