@@ -106,7 +106,7 @@
 					<a href='/mall/item/view?item_id={{ item.id.value }}'>					
 						<div class='item'>						
 							<div class='photo'>
-								<img class='fake 'src='/themes/mall_philgo/img/todays_pick_fake_lower_right.png'/>
+								<img class='fake 'src='/{{ dir_sub_theme }}/img/todays_pick_fake_lower_right.png'/>
 								{% if images.item_image_thumbnail[0] %}
 									{% set url_thumb = images.item_image_thumbnail[0].url_large %}
 								{% else %}
