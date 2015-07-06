@@ -16,6 +16,7 @@ mall_philgo:
   version: 1.x
   css:
     theme:
+      templates/mall_philgo/css/mall.account.css: {}
       templates/mall_philgo/css/component.header-top.css: {}
       templates/mall_philgo/css/component.header-content.css: {}
       templates/mall_philgo/css/component.header-menu.css: {}

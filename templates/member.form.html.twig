@@ -1,33 +1,63 @@
 {% set member = data.member %}
 {% import dir_macro ~ '/html.html.twig' as html %}
 {{ error_message | raw }}
-<form>
+<form class='mall-member-register-form'>
     <fieldset>
-        <legend>Mall Registration Form</legend>
         <input type="hidden" name="mode" value="submit">
-        {% if member %}
-            {{ html.row('username', member.name.value, 'User ID') }}
-        {% else %}
-            {{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value':'', 'label':'User ID', 'placeholder':'User ID'}) }}
-            {{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
-        {% endif %}
-        {{ html.input({'type':'email','name':'mail', 'id':'register-email', 'class':'email', 'value':member.mail.value, 'label':'Email', 'placeholder':'Email'}) }}
-
-
-        {{ html.input({'type':'text','name':'first_name', 'id':'register-first_name', 'class':'first_name', 'value':member.extra.first_name, 'label':'First Name', 'placeholder':'Input your first name'}) }}
-        {{ html.input({'type':'text','name':'middle_name', 'id':'register-middle_name', 'class':'middle_name', 'value':member.extra.middle_name, 'label':'Middle Name', 'placeholder':'Input your middle name'}) }}
-        {{ html.input({'type':'text','name':'last_name', 'id':'register-last_name', 'class':'last_name', 'value':member.extra.last_name, 'label':'Last Name', 'placeholder':'Input your last name'}) }}
-
-        {{
-            html.radio('gender', 'Gender', [
-        {'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender },
-        {'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
-            ])
-        }}
-        {{ html.select_month({'name':'month', 'label':'Month', 'default': member.extra.month }) }}
-        {{ html.select_number({'name':'day', 'from':1, 'to':31, 'label':'Day', 'default':member.extra.day}) }}
-        {{ html.select_number({'name':'year', 'from':2008, 'to':1950, 'label':'Year', 'default':member.extra.year}) }}
-        <input type="submit" role="button" value="UPDATE">
-        <a href="#" role="button">CANCEL</a>
+		<div class='group one'>
+			{% if member %}
+				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}
+			{% else %}
+				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value':'', 'label':'User ID', 'placeholder':'User ID'}) }}
+				{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
+			{% endif %}        
+			{{ html.input({'type':'text','name':'first_name', 'id':'register-first_name', 'class':'first_name', 'value':member.extra.first_name, 'label':'First Name', 'placeholder':'Input your first name'}) }}
+			{{ html.input({'type':'text','name':'middle_name', 'id':'register-middle_name', 'class':'middle_name', 'value':member.extra.middle_name, 'label':'Middle Name', 'placeholder':'Input your middle name'}) }}
+			{{ html.input({'type':'text','name':'last_name', 'id':'register-last_name', 'class':'last_name', 'value':member.extra.last_name, 'label':'Last Name', 'placeholder':'Input your last name'}) }}
+		</div>
+		<div class='group two'>
+			{{ html.input({'type':'email','name':'mail', 'id':'register-email', 'class':'email', 'value':member.mail.value, 'label':'Email', 'placeholder':'Email'}) }}
+			{{ html.input({'type':'text','name':'mobile', 'id':'register-mobile', 'class':'mobile', 'value':member.extra.mobile, 'label':'Mobile', 'placeholder':'Mobile'}) }}
+			{{ html.input({'type':'text','name':'phone', 'id':'register-phone', 'class':'phone', 'value':member.extra.phone, 'label':'Phone', 'placeholder':'Phone'}) }}			
+		</div>
+		<div class='group three'>
+			<table cellpadding=0 cellspacing=0 width='100%'>
+				<tr class='row date'>
+					<td width='153'>
+						<label class='caption'>Birth Date</label>
+					</td>
+					<td>
+						{{ html.select_month({'name':'month', 'label':'Month', 'default': member.extra.month }) }}
+						{{ html.select_number({'name':'day', 'from':1, 'to':31, 'label':'Day', 'default':member.extra.day}) }}
+						{{ html.select_number({'name':'year', 'from':2008, 'to':1950, 'label':'Year', 'default':member.extra.year}) }}
+					</td>
+				</tr>
+				<tr class='row'>
+					<td>
+						<label class='caption'>Gender</label>
+					</td>
+					<td>
+						{{
+							html.radio('gender', 'Gender', [
+						{'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender },
+						{'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
+							])
+						}}
+					</td>
+				</tr>
+				<tr class='row'>
+					<td>
+						<label class='caption'>Location</label>
+					</td>
+					<td>
+					{{ html.input({'type':'text','name':'location', 'id':'register-location', 'class':'location', 'value':member.extra.location, 'label':'Location', 'placeholder':'Location'}) }}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class='buttons'>
+			<input type="submit" role="button" value="UPDATE">
+			<a class='cancel' href="/" role="button">CANCEL</a>
+		</div>
     </fieldset>
 </form>

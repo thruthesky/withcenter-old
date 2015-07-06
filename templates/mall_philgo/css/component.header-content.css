@@ -41,7 +41,11 @@ header .content .right > .wrapper > a{
 	box-sizing:border-box;
 	z-index:1;
 }
-	
+
+header .content .right > .wrapper > a:hover{	
+	text-decoration:underline;
+}
+
 header .content .right > .wrapper:nth-child(odd) a{
 	padding:2px 0 2px 20px;
 	border-left:0;	
@@ -99,10 +103,12 @@ form.search input[type='text'] {
 }
 
 @media all and (min-width: 760px) {
-    header .content .left { display: block; }
-    header .content .right { display: block; }
+    header .content .left { display: block; }   
     header .content .center { max-width:300px; }
 }
 @media all and (min-width: 840px) {
     header .content .center { max-width:360px; }
+}
+@media all and (min-width: 960px) {
+     header .content .right { display: block; }
 }

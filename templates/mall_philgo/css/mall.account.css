@@ -1,0 +1,239 @@
+form.mall-member-register-form .group > .row{
+	display:block;	
+}
+
+form.mall-member-register-form .row > label, form.mall-member-register-form .row > div{
+	border-top:1px solid #99d0ff;
+	display:block;
+}
+
+form.mall-member-register-form .row:first-child > label, form.mall-member-register-form .row:first-child > div{
+	border-top:0;
+}
+
+form.mall-member-register-form .row > div{
+	width:100%;
+}
+
+form.mall-member-register-form .group .row.username.update > .text{	
+	padding:5px 10px;
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .group.three tr{
+	border-top:1px solid #99d0ff;
+}
+
+form.mall-member-register-form .group.three tr:first-child{
+	border-top:0;
+}
+
+form.mall-member-register-form .group.three .row.data-set .caption{
+	display:none!important;
+}
+
+form.mall-member-register-form .group.three .row.date .row.data-set{
+	float:left;
+	width:33.33%;
+	border-right:1px solid #99d0ff;
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .group.three .row.date .row.data-set:last-child{
+	border-right:0;
+}
+
+form.mall-member-register-form .group.three .row.data-set.location{
+	width:100%;
+}
+
+form.mall-member-register-form .group.three .row.data-set.gender .text{
+	float:left;
+	display:inline-block;
+	width:auto;
+	padding:5px 10px;
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .group.three .row.data-set.location .text{
+	display:block;
+}
+
+*:focus {
+    outline: 0;
+}
+
+
+
+
+
+
+form.mall-member-register-form{
+	padding:10px;
+	background-color:#ffffff;
+	border-radius:3px;
+}
+
+form.mall-member-register-form .title{
+	margin-bottom:3px;
+	font-size:1.2em;
+	font-weight:bold;
+	color:#4b4b4b;
+}
+
+form.mall-member-register-form .description{
+	margin:0 0 2px 3px;
+	color:#818181;
+}
+
+form.mall-member-register-form .group{
+	margin-bottom:10px;
+	border:1px solid #99d0ff;
+	/*border-radius:3px;*/
+	-moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+form.mall-member-register-form .group .row{
+	/*border-bottom:1px solid #99d0ff;*/
+	color:#777777;
+}
+
+form.mall-member-register-form .group .row:last-child{
+	border-bottom:0;
+}
+
+form.mall-member-register-form .group .row .caption{
+	display:none;
+	height:32px;
+	padding:9px 10px;
+	width:153px;
+	border-right:1px solid #99d0ff;
+	background-color:#e9f6ff;
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .group .row input[type='text'], form.mall-member-register-form .group .row input[type='email'], form.mall-member-register-form .group .row input[type='password']{
+	
+	height: 28px;
+	width:100%;
+	padding:5px 10px;
+	border:0;
+	box-sizing:border-box;
+}
+
+ form.mall-member-register-form .group .row.logged_in span.account-label{
+	display:inline-block;
+	height: 29px;
+	width:100%;
+	padding:7px 10px;	
+	box-sizing:border-box;
+ }
+
+form.mall-member-register-form .group .row select{
+	float:left;
+	height: 32px;
+	width:100%;
+	padding:5px 10px;
+	margin:0;
+	border:0;
+	border-right:1px solid #99d0ff;
+	/*border:1px solid #99d0ff;*/
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .group .row select[name='gender'], form.mall-member-register-form .group .row select[name='field_gender']{
+	width:100%;
+}
+
+form.mall-member-register-form .group .row select:last-child{
+	border:0;
+}
+
+form.mall-member-register-form .group .row .is-logged-in{
+	display:inline-block;
+	padding:5px 10px;
+}
+/**/
+form.mall-member-register-form .row a{
+	color:#ff5757;
+}
+
+form.mall-member-register-form .buttons{
+	text-align:center;
+}
+
+form.mall-member-register-form .buttons input[type='submit']{
+	float:left;
+	display:inline-block;
+	height:30px;
+	width:70%;
+	padding:5px 15px;
+	border:0;
+	border-radius:3px;	
+	background-color:#1886c5;
+	color:#ffffff;
+	font-weight:bold;
+	box-sizing:border-box;
+}
+
+form.mall-member-register-form .buttons .cancel{
+	float:left;
+	display:inline-block;
+	height:30px;
+	width:30%;
+	padding:5px 15px;
+	color:#ff5858;
+	font-weight:bold;
+	box-sizing:border-box;
+}
+/**/
+
+form.mall-member-register-form .group td:first-child{
+	display:none;
+}
+
+/*override*/
+form.mall-member-register-form fieldset{
+	border:0;
+}
+
+.mall-page .contentform.mall-member-register-form{
+	padding:0;
+}
+/*eo override*/
+
+@media all and ( min-width: 400px ) {
+	form.mall-member-register-form .group > .row{
+		display:table-row;
+	}
+	
+	form.mall-member-register-form .row > label, form.mall-member-register-form .row > div{
+		display:table-cell;		
+	}
+	
+	form.mall-member-register-form .group td:first-child{
+		display:table-cell;
+	}
+	
+	form.mall-member-register-form .group .row .caption{
+		display:inline-block;
+	}
+	
+	/*
+	*placeholder
+	*works on chrome, firefox, IE, Opera
+	*/
+	form.mall-member-register-form input::-webkit-input-placeholder {
+		color: transparent;
+	}
+	form.mall-member-register-form input::-moz-placeholder {
+		color: transparent;
+	}
+	form.mall-member-register-form input:-ms-input-placeholder {
+		color: transparent;
+	}
+	form.mall-member-register-form input:-moz-placeholder {
+		color: transparent;
+	}
+}
