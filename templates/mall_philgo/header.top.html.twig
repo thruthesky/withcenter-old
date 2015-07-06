@@ -5,14 +5,14 @@
         {% if logged_in %}
             <a href="/user/logout">{{ language == 'ko' ? '로그아웃' : 'Logout' }}</a>
         {% else %}
-            <a href="/user/login">{{ language == 'ko' ? '로그인' : 'Login' }}</a>
+            <a href="/member/login">{{ language == 'ko' ? '로그인' : 'Login' }}</a>
         {% endif %}
         <span class="dot">•</span>
 
         {% if logged_in %}
-            <a href="/mall/member/register">{{ language == 'ko' ? '정보변경' : 'Account Update' }}</a>
+            <a href="/member/update">{{ language == 'ko' ? '정보변경' : 'Account Update' }}</a>
         {% else %}
-            <a href="/mall/member/register">{{ language == 'ko' ? '회원가입' : 'Register' }}</a>
+            <a href="/member/register">{{ language == 'ko' ? '회원가입' : 'Register' }}</a>
         {% endif %}
 
         <span class="dot">•</span>

@@ -12,8 +12,6 @@ default:
   dependencies:
     - core/jquery
     - core/jquery.ui
-
-
 mall_philgo:
   version: 1.x
   css:
