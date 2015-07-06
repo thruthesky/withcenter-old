@@ -1,0 +1,14 @@
+<table cellpadding=0 cellspacing=0 width='100%'>
+    <tr valign='top'>
+        <td class='td-left-side-bar'>
+            {% include dir_sub_theme ~ '/left-side-bar.html.twig' %}
+        </td>
+        <td>
+            {% if is_front %}
+                {% include dir_sub_theme ~ '/first-page.html.twig' %}
+            {% else %}
+                {{ page.content }}
+            {% endif %}
+        </td>
+    </tr>
+</table>

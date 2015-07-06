@@ -1,7 +1,7 @@
 .layout > header,
 .layout > footer,
 .layout > .content {
-    margin:0 6px;
+    margin:0;
     max-width:960px;
 }
 

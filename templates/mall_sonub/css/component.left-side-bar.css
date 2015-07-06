@@ -1,5 +1,7 @@
-﻿.left-side-bar{
+﻿.left-side-bar {
 	margin-right:10px;
+    width:200px;
+    background-color: #f0f0ff;
 }
 
 .left-side-bar > div{
@@ -7,7 +9,7 @@
 }
 
 .left-side-bar .thumbnail-list{
-	padding:5px 10px;
+	padding:5px 0;
 }
 
 .left-side-bar .thumbnail-list .title{
@@ -44,11 +46,11 @@
 	overflow: hidden;
 	box-sizing: border-box;
 	line-height: 120%;
-	word-break: break-word;
+	word-break: break-all;
 }
 
 .left-side-bar .bulleted-list{
-	padding:5px 10px;
+	padding:5px;
 	/*margin-bottom: 10px;
 	background-color: #f7f7f7;
 	border:1px solid #b0b0b0;*/
