@@ -6,20 +6,79 @@ header .content {
 header .content .left {
     position:absolute;
     display:none;
-    top:45px;
+    top:0;
     left:0;
 }
 header .content .left img {
     width:100%;
 }
 header .content .right {
-    position:absolute;
-    display:none;
-    top:45px;
-    right:0;
+	position: absolute;
+	display: none;
+	top: 0;
+	right: 50px;
 }
-header .content .right img {
-    width:100%;
+header .content .right {
+    width:200px;
+}
+
+header .content .right > .wrapper{
+    position:relative;	
+	padding:5px;
+	margin-bottom:5px;
+	background-color:#ce3e2f;
+}
+
+header .content .right > .wrapper > a{	
+	display:inline-block;
+	position:relative;
+    width:100%;	
+	padding:5px;
+	background-color:#ce3e2f;
+	border:1px dashed #fff;
+	font-weight:bold;
+	color:#fff;
+	box-sizing:border-box;
+	z-index:1;
+}
+	
+header .content .right > .wrapper:nth-child(odd) a{
+	padding:2px 0 2px 20px;
+	border-left:0;	
+}
+
+header .content .right > .wrapper:nth-child(even) a{
+	padding:2px 20px 2px 0;
+	border-right:0;
+	text-align:right; 
+}
+
+header .content .right > .wrapper > .photo{
+    position:absolute;
+	top:-7px;
+	width:44px;
+	height:44px;
+	padding:5px;
+	background-color:#ce3e2f;
+	border-radius:44px;
+	box-sizing:border-box;
+}
+
+header .content .right > .wrapper:nth-child(odd) > .photo{
+   right:93%;
+}
+
+header .content .right > .wrapper:nth-child(even) > .photo{
+   left:93%;
+}
+
+header .content .right > .wrapper > .photo img{	
+    display:block;
+	/*padding:5px;*/
+	width:100%;
+	border:1px dashed #fff;
+	border-radius:38px;
+	box-sizing:border-box;
 }
 
 header .content .center {

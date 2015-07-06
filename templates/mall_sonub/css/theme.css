@@ -1,0 +1,14 @@
+.layout > header{/*this is inside theme.css*/
+	max-width:none;
+	margin-bottom:10px;
+}
+
+.td-left-side-bar{
+	display:none;
+}
+
+@media all and ( min-width: 640px ) { 
+	.td-left-side-bar{
+		display:table-cell;
+	}
+}

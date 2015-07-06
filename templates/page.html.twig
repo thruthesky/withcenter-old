@@ -8,13 +8,40 @@ Added this if condition because if the dir_sub_theme is blank, it causes white s
 		<header class="header">
 			{% include dir_sub_theme ~ '/header.top.html.twig' %}
 			{% include dir_sub_theme ~ '/header.logo-search.html.twig' %}
-			{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+			
+			{# for mall_sonub ONLY.. #}
+			{% if "mall_sonub" in dir_sub_theme %}
+				{% if is_front %}
+					{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+				{% endif %}
+			{% else %}
+				{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+			{% endif %}
 		</header>
 		<section class="content">
-			{% if is_front %}
-				{% include dir_sub_theme ~ '/first-page.html.twig' %}
+		
+			{# as of now ONLY mall_sonub has side bar... #}
+			{% if "mall_sonub" in dir_sub_theme %}
+				<table cellpadding=0 cellspacing=0 width='100%'>
+					<tr valign='top'>
+						<td class='td-left-side-bar' width='220'>
+							{% include dir_sub_theme ~ '/left-side-bar.html.twig' %}
+						</td>
+						<td>
+							{% if is_front %}
+								{% include dir_sub_theme ~ '/first-page.html.twig' %}
+							{% else %}
+								{{ page.content }}
+							{% endif %}
+						</td>
+					</tr>
+				</table>
 			{% else %}
-				{{ page.content }}
+				{% if is_front %}
+					{% include dir_sub_theme ~ '/first-page.html.twig' %}
+				{% else %}
+					{{ page.content }}
+				{% endif %}
 			{% endif %}
 		</section>
 		<footer class="footer">
