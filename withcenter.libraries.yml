@@ -30,6 +30,7 @@ mall_sonub:
   version: 1.x
   css:
     theme:
+      templates/mall_sonub/css/mall.account.css: {}
       templates/mall_sonub/css/component.header-top.css: {}
       templates/mall_sonub/css/component.logo-and-search.css: {}
       templates/mall_sonub/css/component.header-menu.css: {}
