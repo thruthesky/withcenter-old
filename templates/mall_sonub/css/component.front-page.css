@@ -66,11 +66,11 @@ img.fake{
 	top:-25%;
 }
 
-.top-items.banner .inner .page a:nth-child(1) .item > div{
+.top-items.banner .inner .page a:first-child .item > div{
 	margin-right:5px;
 }
 
-.top-items.banner .inner .page a:nth-child(2).item > div{
+.top-items.banner .inner .page a:last-child .item > div{
 	margin-left:5px;
 }
 
