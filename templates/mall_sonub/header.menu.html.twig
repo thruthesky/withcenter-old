@@ -3,11 +3,17 @@
 {% if data.view_item_category_root_id %}
 	{% set category_id = data.view_item_category_root_id %}
 {% endif %}
-
 <div class='bottom'>
 	<div class='inner clearfix'>
 	{% for menu in menus %}
-		<a class='menu{{ category_id == menu.entity.id.value ? ' selected'}}' href='/mall/item/search?category_id={{ menu.entity.id.value }}'>{{ menu.entity.name.value }}<img src='/themes/withcenter/templates/mall_sonub/img/menu_selected.png'/></a>
+		<a class='menu{{ category_id == menu.entity.id.value ? ' selected'}}' href='/mall/item/search?category_id={{ menu.entity.id.value }}'>{{ f.get( ko, menu.entity.name.value ) }}<img src='/themes/withcenter/templates/mall_sonub/img/menu_selected.png'/></a>
 	{% endfor %}
 	</div>
 </div>
+{% if ko %}
+<style>
+    .layout > header .bottom .menu {
+        font-family: "Malgun Gothic", AppleGothic, serif;
+    }
+</style>
+{% endif %}
