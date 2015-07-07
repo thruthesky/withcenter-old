@@ -6,7 +6,7 @@ header .content {
 header .content .left {
     position:absolute;
     display:none;
-    top:0;
+    top:29px;
     left:0;
 }
 header .content .left img {

@@ -23,7 +23,7 @@ header .bottom .inner a.menu{
 	display:inline-block;
 	position:relative;
 	height:44px;
-	padding:15px 5px;
+	padding:15px 21px;
 	font-size:1.1em;
 	font-weight:bold;
 	color:#ffffff;	
@@ -32,10 +32,10 @@ header .bottom .inner a.menu{
 }
 
 header .bottom .inner a.menu:hover{
-	color:yellow;
+	
 }
 
-header .bottom .inner a.menu.selected{
+header .bottom .inner a.menu.selected, header .bottom .inner a.menu.hover{
 	position:relative;
 	height:54px;
 	top:-5px;
@@ -52,7 +52,7 @@ header .bottom .inner a.menu > img{
 	top:0;
 }
 
-header .bottom .inner a.menu.selected > img{
+header .bottom .inner a.menu.selected > img, header .bottom .inner a.menu.hover > img{
 	display:block;
 }
 /*eo header bottom*/
@@ -63,14 +63,15 @@ header .bottom .inner a.menu.selected > img{
 	header .bottom .inner{
 		padding:0;
 	}
-	
+	/*
 	header .bottom .inner a.menu{
-		padding:15px 15px;
-	}
+		padding:15px 21px;
+	}*/
 }
 
 @media all and ( min-width: 960px ) { 
+	/*
 	header .bottom .inner a.menu{
-		padding:15px 25px;
-	}
+		padding:15px 21px;
+	}*/
 }
