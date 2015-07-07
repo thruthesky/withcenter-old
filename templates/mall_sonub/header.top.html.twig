@@ -1,3 +1,10 @@
+{% if ko %}
+<style>
+    .layout > header .top .item .text {
+        font-family: Gulim, "Malgun Gothic", AppleGothic;
+    }
+</style>
+{% endif %}
 <div class='top'>
 	<div class='inner'>
 		<table class='menu-table' width="100%" cellpadding="0" cellspacing="0">
@@ -11,11 +18,11 @@
 				</td>
 
 				<td class="ask">
-					<a href="/ask">
+					<a href="/post/ask">
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								Ask
+								{{ ko ? '질문답변' : 'Ask' }}
 							</div>
 						</div>
 					</a>
@@ -26,18 +33,18 @@
 						<div class="item knowledge">
 							<div class="sprite"></div>
 							<div class="text">
-								Knowledge
+                                {{ ko ? '지식인' : 'Knowledge' }}
 							</div>
 						</div>
 					</a>
 				</td>
 
 				<td class="discussion">
-					<a href="/discussion">
+					<a href="/post/discussion">
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								Forum
+                                {{ ko ? '자유토론' : 'Discussion' }}
 							</div>
 						</div>
 					</a>
@@ -47,7 +54,9 @@
 					<a href="/market">
 						<div class="item">
 							<div class="sprite"></div>
-							<div class="text">Market</div>
+							<div class="text">
+                                {{ ko ? '쇼핑몰' : 'Market' }}
+                            </div>
 						</div>
 					</a>
 				</td>
@@ -58,7 +67,7 @@
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								FHM
+                                {{ ko ? '매거진' : 'FHM' }}
 							</div>
 						</div>
 					</a>
@@ -69,7 +78,7 @@
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								News
+                                {{ ko ? '뉴스' : 'News' }}
 							</div>
 						</div>
 					</a>
@@ -80,7 +89,7 @@
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								Music
+                                {{ ko ? '음악' : 'Music' }}
 							</div>
 						</div>
 					</a>
@@ -91,7 +100,7 @@
 						<div class="item">
 							<div class="sprite"></div>
 							<div class="text">
-								Jobs
+                                {{ ko ? '구인구직' : 'Jobs' }}
 							</div>
 						</div>
 					</a>
@@ -109,7 +118,7 @@
 									{% endif %}
 								</div>
 								<div class="text">
-									My Page
+									{{ ko ? '개인정보' : 'My Page' }}
 								</div>
 							</div>
 						</a>
@@ -117,7 +126,7 @@
 							<div class="item user signin">
 								<div class="sprite"></div>
 								<div class="text">
-									Sign in
+									{{ ko ? '회원가입' : 'Sign in' }}
 								</div>
 							</div>
 					{% endif %}
@@ -126,7 +135,7 @@
 					<div class="item more">
 						<div class="sprite"></div>
 						<div class="text">
-							More
+                            {{ ko ? '메뉴' : 'More' }}
 						</div>
 					</div>
 				</td>
