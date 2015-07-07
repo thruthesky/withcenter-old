@@ -1,6 +1,8 @@
 img.fake{
+	position:relative;
     width:100%;
     opacity:0;
+	z-index:-1;
 }
 
 /** Do not enable this.
