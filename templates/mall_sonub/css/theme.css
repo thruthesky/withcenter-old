@@ -11,13 +11,8 @@
     margin-bottom:10px;
 }
 
-.td-left-side-bar{
-	width:210px;/*were to put this?*/
-	display:none;
-}
 
-@media all and ( min-width: 860px ) {
-	.td-left-side-bar{
-		display:table-cell;
-	}
+
+.ko {
+    font-family: "Malgun Gothic", AppleGothic, Gulim, serif;
 }
