@@ -68,7 +68,7 @@
 			</a>
 			
 			{% if loop.index is even or loop.index  == ( items|length )%}
-				</div>
+				</div loop.index>
 				{% set page_count = page_count + 1 %}
 			{% endif %}
 		{% endfor %}
