@@ -6,19 +6,27 @@ var mall_top_total_items = 0;
 //var mall_top_fake_items = 0;
 var mall_top_animation_counter = 0;
 var mall_top_is_animating = false;
+
 $(function(){	
 	if( $(".top-items.banner").length ){
 		getInitialVariables();
 		$("body").on( "click",".top-items.banner .arrow", callback_mall_top_arrow );
 	}
+	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class );
+	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );	
 });
+
+function callback_menu_class(){	
+	$this = $(this);		
+	if( $this.hasClass('selected') ) return;
+	if( $this.hasClass('hover') ) $this.removeClass('hover');
+	else $this.addClass('hover');	
+}
 
 function getInitialVariables(){
 	mall_top_total_items = $(".top-items.banner .item[page]").length;
 	mall_top_total_pages = $(".top-items.banner .page[page]").length;
 	mall_top_fake_total_pages = $(".top-items.banner .page.fake").length;
-	console.log( mall_top_total_pages );
-	console.log( mall_top_fake_total_pages );
 	if( mall_top_total_pages > 1 ){
 		reset_mall_top_position();				
 	}
