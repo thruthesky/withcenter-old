@@ -1,7 +1,7 @@
 {% set menus = data.category_entity_list %}
 {% set category_id = input.category_id  %}
-{% if data.view_item_category_root %}
-	{% set category_id = data.view_item_category_root.id.value %}
+{% if data.view_item_category_root_id %}
+	{% set category_id = data.view_item_category_root_id %}
 {% endif %}
 
 <div class='bottom'>
