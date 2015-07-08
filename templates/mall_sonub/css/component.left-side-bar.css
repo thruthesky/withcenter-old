@@ -61,7 +61,7 @@
 	overflow: hidden;
 	box-sizing: border-box;
 	line-height: 120%;
-	word-break: break-all;
+	word-break: break-word;
 }
 
 .left-side-bar .bulleted-list{
