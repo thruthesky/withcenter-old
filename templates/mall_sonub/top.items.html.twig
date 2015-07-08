@@ -68,7 +68,8 @@
 			</a>
 			
 			{% if loop.index is even or loop.index  == ( items|length )%}
-				</div loop.index>
+
+				</div>
 				{% set page_count = page_count + 1 %}
 			{% endif %}
 		{% endfor %}
@@ -99,9 +100,9 @@
 						</div>						
 					</div>
 				</a>
-			{% endfor %}
-		{% endif %}
+			{% endfor %}		
 		</div>
+		{% endif %}
 		
 		<img class='fake 'src='/themes/withcenter/templates/mall_sonub/img/top_fake.png'/>
 		<div class='arrow left'><img src='/{{ dir_sub_theme }}/img/top_arrow_left.png'/></div>
