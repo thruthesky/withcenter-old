@@ -6,14 +6,14 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 #}
 
 {% set posts = data.sidebar_post_thumbnail %}
-<div class='thumbnail-list'>
-	<div class='title'>Popular Posts</div>
+<section class='list thumbnail-list'>
+	<div class='title {{ language }}'>{{ ko ? '최신 인기글' : 'Popular Posts' }}</div>
 	{% for p in posts %}
 	<a href='/post/{{ p.entity.config_id.entity.name.value  }}/{{ p.entity.id.value }}'>
 		<div class='item clearfix' >
 			<div class='photo'><img src='{{ p.first_image_thumbnail.url_thumbnail }}'/></div>
-			<div class='info'>{{ p.entity.title.value }}</div>
+			<div class='info {{ language }}'>{{ p.entity.title.value }}</div>
 		</div>
 	</a>
 	{% endfor %}
-</div>
+</section>
