@@ -118,9 +118,9 @@ img.fake{
 }
 
 .top-items.banner .inner .item > .info .price.constant{
-	font-size: 1em;
+	/*font-size: 1em;*/
 	color:yellow;
-	line-height: 140%;
+	/*line-height: 140%;*/
 }
 
 .top-items.banner .inner .item > .info .category-label{	
@@ -289,6 +289,11 @@ img.fake{
 
 .todays-pick section.grid .item  .info .price{
     font-size:1.2em;
+}
+
+.todays-pick section.grid .item  .info .price.constant{
+    /*font-size:1em;*/
+	color:yellow;
 }
 
 .todays-pick section.grid .item .photo{
