@@ -111,11 +111,11 @@
 						<a href="/page/{{ user.username }}">
 							<div class="item user page">
 								<div class="sprite">
-									{% if user_photo_src %}
+									{#{% if user_photo_src %}
 										<img src="{{ user_photo_src }}">
 									{% else %}
 										<img src="/{{ dir_sub_theme }}/img/primary-photo.png">
-									{% endif %}
+									{% endif %}#}
 								</div>
 								<div class="text">
                                     <script>ln('My Page,개인정보');</script>
@@ -143,5 +143,47 @@
 				</td>
 			</tr>
 		</table>
+		
+		
+		<nav class="menu" style="display: none;">
+		<ul>
+			<li>
+				{% if logged_in %}
+					<a href="/user/accountUpdate">{{ ko ? '개인정보' : 'My Page' }}</a>
+				{% else %}
+					<a href='/user/login' class="login">{{ ko ? '로그인' : 'Sign in' }}</a>
+				{% endif %}
+			</li>
+			<li>
+
+				{% if logged_in %}
+					<a href="/user/logout">{{ ko ? 'Sign Out' : 'Sign Out' }}</a>
+				{% else %}
+					<a href="/member/register">{{ ko ? 'Register' : 'Register' }}</a>
+				{% endif %}
+
+			</li>
+			<li><a href="/post/ask">Ask</a></li>
+			<li><a href="/post/knowledge">Knowledge</a></li>
+			<li><a href="/post/discussion">Forum</a></li>
+			<li><a href="/">Market</a></li>
+			<li><a href="/post/job">Jobs</a></li>
+			<li><a href="/post/drama">Drama</a></li>
+			<li><a href="/post/fhm">FHM</a></li>
+			<li><a href="/post/news">News</a></li>
+			<li><a href="/post/music">Music</a></li>
+			<li>
+				<div class="copyright">
+					<div class="menu">
+						<a href="#">Privacy</a>
+						<a href="#">Terms</a>
+					</div>
+					<div class="company">
+						<a href="#">Sonub (c) 2013 ~ {{ 'now'|date("Y") }}</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
 	</div>
 </div>
