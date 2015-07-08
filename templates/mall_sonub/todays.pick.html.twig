@@ -11,7 +11,8 @@
 				{% set i =  items[0] %}
 				{% set item = i.entity %}
 				{% set images = i.images %}
-				{% set price = i.rendered_price %}
+				{% set price = i.rendered_price.price %}
+				{% set price_type = i.rendered_price.type %}
 				<div class='item-wrapper clearfix'>
 					<a href='/mall/item/view?item_id={{ item.id.value }}'>			
 						<div class='item'>					
@@ -26,7 +27,7 @@
 							<div class='info-wrapper'></div>
 							<div class='info circle-type'>
 								<div class='title'><span class='fake'>&nbsp;</span>{{ item.title.value }}</div>
-								<div class='price'>{{ price }}</div>
+								<div class='price {{ price_type }}'>{{ price }}</div>
 							</div>	
 						</div>
 					</a>
@@ -40,7 +41,8 @@
 					{% set i =  items[num] %}
 					{% set item = i.entity %}
 					{% set images = i.images %}
-					{% set price = i.rendered_price %}			
+					{% set price = i.rendered_price.price %}
+					{% set price_type = i.rendered_price.type %}			
 						<a href='/mall/item/view?item_id={{ item.id.value }}'>					
 							<div class='item'>
 								<div class='inner'>
@@ -53,7 +55,7 @@
 										<img src='{{ url_thumb }}'/>					
 										<div class='info arrow-type-info-1'>
 											<div class='title'><span class='text'>{{ item.title.value }}</span><div class='arrow-right one'></div></div><br>
-											<div class='price'>{{ price }}<div class='arrow-right three'></div></div>
+											<div class='price {{ price_type }}'>{{ price }}<div class='arrow-right three'></div></div>
 										</div>
 									</div>						
 								</div>
@@ -73,7 +75,8 @@
 						{% set i =  items[num] %}
 						{% set item = i.entity %}
 						{% set images = i.images %}
-						{% set price = i.rendered_price %}				
+						{% set price = i.rendered_price.price %}
+						{% set price_type = i.rendered_price.type %}}				
 							<a href='/mall/item/view?item_id={{ item.id.value }}'>					
 								<div class='item'>
 									<div class='inner'>
@@ -86,7 +89,7 @@
 											<img src='{{ url_thumb }}'/>					
 											<div class='info arrow-type-info-1'>
 												<div class='title'><span class='text'>{{ item.title.value }}</span><div class='arrow-right one'></div></div><br>
-												<div class='price'>{{ price }}<div class='arrow-right three'></div></div>
+												<div class='price {{ price_type }}'>{{ price }}<div class='arrow-right three'></div></div>
 											</div>
 										</div>						
 									</div>
