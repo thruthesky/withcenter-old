@@ -23,6 +23,11 @@
     margin:0;
 }
 
+/*just spacing from the sprite and the text*/
+.layout > header .top .item .sprite{
+    margin-bottom:3px;
+}
+
 .layout > header .top table.menu-table a {
     color:white;
 }
