@@ -12,9 +12,16 @@ $(function(){
 		getInitialVariables();
 		$("body").on( "click",".top-items.banner .arrow", callback_mall_top_arrow );
 	}
+	
+	$("body").on( "click",".layout > header .top table.menu-table .item.more", callback_slide_nav_menu );
+	
 	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class );
-	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );	
+	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );		
 });
+
+function callback_slide_nav_menu(){
+	$("header .top nav.menu").slideToggle();
+}
 
 function callback_menu_class(){	
 	$this = $(this);		

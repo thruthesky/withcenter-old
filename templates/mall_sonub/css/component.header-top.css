@@ -81,27 +81,32 @@
     border-radius: 50%;
 }
 
-
+/*nav.menu*/
 .layout > header .top nav.menu {
     background-color: #353535;
     position:absolute;
     right:0;
     color:white;
-    max-width:18.4em;
+    max-width:16em;
     overflow:hidden;
+	z-index:5;
 }
+.layout > header .top nav.menu a{
+	color:#fff;
+}
+
 .layout > header .top nav.menu ul {
     list-style:none;
     margin:0;
     padding:0;
 }
-.layout > header .top nav.menu ul li span {
+.layout > header .top nav.menu ul li > a {
     display:inline-block;
-    padding:0.6em 1em;
+    padding:0.6em 1.5em;
     box-sizing: border-box;
     border-bottom:1px solid grey;
-    width:18.4em;
-    font-size:1.2em;
+    width:15em;
+    font-size:1.1em;
     cursor:pointer;
 }
 
@@ -111,7 +116,7 @@
     font-size:1em;
     text-align: center;
 }
-
+/*eo nav.menu*/
 
 /** 1px and above **/
 header table.menu-table td.job,
@@ -308,4 +313,10 @@ header table.menu-table td.search .item.more960{
 		display:none; 
 	}
 	/*---*/
+}
+
+@media all and ( min-width: 980px ) {
+	.layout > header .top nav.menu {
+		right:-20px;
+	}	
 }
