@@ -119,6 +119,7 @@ img.fake{
 
 .top-items.banner .inner .item > .info .price.constant{
 	font-size: 1em;
+	color:yellow;
 	line-height: 140%;
 }
 
