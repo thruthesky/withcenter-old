@@ -107,7 +107,7 @@
 				</td>
 
 				<td class="login">
-					{% if user_login %}
+					{% if logged_in %}
 						<a href="/page/{{ user.username }}">
 							<div class="item user page">
 								<div class="sprite">
@@ -123,7 +123,7 @@
 							</div>
 						</a>
 					{% else %}
-                    <a href="/member/register">
+                    <a href="/member/login">
 							<div class="item user signin">
 								<div class="sprite"></div>
 								<div class="text">
