@@ -2,16 +2,14 @@
 use Drupal\post\Entity\PostData;
 
 if( $hook == 'page' ){
-	$post_with_thumbnail = PostData::search([
-										'post_config_name' => 'job',
+	$post_with_thumbnail = PostData::search([										
 										'fid_of_first_image' => true,
 										'order_field' => 'created',
 										'order_direction' => 'DESC',
 										'limit'=>'4'
 									]);
 									
-	$variables['data']['sidebar_post_bullet'] = PostData::search([
-										'post_config_name' => 'discussion',
+	$variables['data']['sidebar_post_bullet'] = PostData::search([										
 										'order_field' => 'created',
 										'order_direction' => 'DESC',
 										'limit'=>'10'
