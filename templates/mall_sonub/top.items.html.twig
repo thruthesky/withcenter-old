@@ -78,7 +78,8 @@
 			{% for i in 0..1%}
 				{% set item = items[i].entity %}
 				{% set images = items[i].images %}
-				{% set price = items[i].rendered_price %}
+				{% set price = items[i].rendered_price.price %}
+				{% set price_type = items[i].rendered_price.type %}
 				<a href='/mall/item/view?item_id={{ item.id.value }}'>
 					<div class='item fake clearfix'>						
 						<div class='photo'>
@@ -92,7 +93,7 @@
 						</div>
 						<div class='info'>
 							<div class='title'>{{ item.title.value }}</div>
-							<div class='price'>{{ price }}</div>
+							<div class='price {{ price_type }}'>{{ price }}</div>
 							<div class='category-label'>
 								<img src='/{{ dir_sub_theme }}/img/left/{{ items[i].category_root.name.value | lower }}.png'/>
 							</div>
