@@ -111,8 +111,15 @@ img.fake{
 	overflow:hidden;
 }
 
-.top-items.banner .inner .item > .info .price{	
+.top-items.banner .inner .item > .info .price{
+	height:23px;
 	font-size:1.5em;
+	overflow:hidden;
+}
+
+.top-items.banner .inner .item > .info .price.constant{
+	font-size: 1em;
+	line-height: 140%;
 }
 
 .top-items.banner .inner .item > .info .category-label{	
