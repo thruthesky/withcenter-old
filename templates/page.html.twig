@@ -1,11 +1,27 @@
+<!--
+<script>
+    ln('Advance Search,고급검색', '.advance-search a');
+    setval('Search,검색', '.submit-wrapper input');
+</script>
+<script>ln('English,Korean');</script>
+-->
 <script type="text/javascript">
     var userLanguage = 'en';
-    if ( location.host.indexOf('philgo') != -1 ) userLanguage = 'ko';
-
-    function ln(text) {
+    if ( location.host.indexOf('sonub') != -1 ) userLanguage = 'ko';
+    function getval(text) {
         var t = text.split(',');
-        if ( userLanguage == 'ko' ) document.write(t[1]);
-        else document.write(t[0]);
+        if ( userLanguage == 'ko' ) str=t[1];
+        else str=t[0];
+        return str;
+    }
+    function setval(text, selector) {
+        var str = getval(text);
+        document.querySelector(selector).value = str;
+    }
+    function ln(text, selector) {
+        var str = getval(text);
+        if ( typeof selector != 'undefined' ) document.querySelector(selector).innerHTML = str;
+        else document.write(str)
     }
 </script>
 {% import dir_macro ~ '/functions.html.twig' as f  %}

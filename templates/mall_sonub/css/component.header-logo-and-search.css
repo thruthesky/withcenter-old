@@ -19,12 +19,14 @@ header .logo-and-search form.search {
 	border-bottom-left-radius:2px;
 	font-size:1.2em;
 	box-sizing:border-box;
+    font-family: "Malgun Gothic", AppleGothic, Gulim, serif;
 }
 
 header .logo-and-search form.search input{
 	border:0;
 	line-height:100%;
 	box-sizing:border-box;
+    font-family: "Malgun Gothic", AppleGothic, Gulim, serif;
 }
 
 header .logo-and-search form.search input[type='text']{
