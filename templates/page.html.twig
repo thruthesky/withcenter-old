@@ -1,3 +1,13 @@
+<script type="text/javascript">
+    var userLanguage = 'en';
+    if ( location.host.indexOf('philgo') != -1 ) userLanguage = 'ko';
+
+    function ln(text) {
+        var t = text.split(',');
+        if ( userLanguage == 'ko' ) document.write(t[1]);
+        else document.write(t[0]);
+    }
+</script>
 {% import dir_macro ~ '/functions.html.twig' as f  %}
 {% if sub_theme %}
     {% include dir_sub_theme ~ '/page.html.twig' %}

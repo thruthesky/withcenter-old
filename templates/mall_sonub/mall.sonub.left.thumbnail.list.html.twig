@@ -7,7 +7,7 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 
 {% set posts = data.sidebar_post_thumbnail %}
 <section class='list thumbnail-list'>
-	<div class='title {{ language }}'>{{ ko ? '최신 인기글' : 'Popular Posts' }}</div>
+	<div class='title {{ language }}'><script>ln('Popular Posts,최신 인기글');</script></div>
 	{% for p in posts %}
 	<a href='/post/{{ p.entity.config_id.entity.name.value  }}/{{ p.entity.id.value }}'>
 		<div class='item clearfix' >
