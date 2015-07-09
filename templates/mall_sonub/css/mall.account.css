@@ -1,239 +1,230 @@
-form.mall-member-register-form .group > .row{
-	display:block;	
-}
-
-form.mall-member-register-form .row > label, form.mall-member-register-form .row > div{
-	border-top:1px solid #99d0ff;
-	display:block;
-}
-
-form.mall-member-register-form .row:first-child > label, form.mall-member-register-form .row:first-child > div{
-	border-top:0;
-}
-
-form.mall-member-register-form .row > div{
-	width:100%;
-}
-
-form.mall-member-register-form .group .row.username.update > .text{	
-	padding:5px 10px;
-	box-sizing:border-box;
-}
-
-form.mall-member-register-form .group.three tr{
-	border-top:1px solid #99d0ff;
-}
-
-form.mall-member-register-form .group.three tr:first-child{
-	border-top:0;
-}
-
-form.mall-member-register-form .group.three .row.data-set .caption{
-	display:none!important;
-}
-
-form.mall-member-register-form .group.three .row.date .row.data-set{
-	float:left;
-	width:33.33%;
-	border-right:1px solid #99d0ff;
-	box-sizing:border-box;
-}
-
-form.mall-member-register-form .group.three .row.date .row.data-set:last-child{
-	border-right:0;
-}
-
-form.mall-member-register-form .group.three .row.data-set.location{
-	width:100%;
-}
-
-form.mall-member-register-form .group.three .row.data-set.gender .text{
-	float:left;
-	display:inline-block;
-	width:auto;
-	padding:5px 10px;
-	box-sizing:border-box;
-}
-
-form.mall-member-register-form .group.three .row.data-set.location .text{
-	display:block;
-}
-
-*:focus {
-    outline: 0;
-}
-
-
-
-
-
-
-form.mall-member-register-form{
-	padding:10px;
-	background-color:#ffffff;
-	border-radius:3px;
-}
-
-form.mall-member-register-form .title{
-	margin-bottom:3px;
+.member-title{
+	padding:0 0 7px 0;
+	margin-bottom:5px;
 	font-size:1.2em;
 	font-weight:bold;
-	color:#4b4b4b;
+	color:#7d7d7d;	
+	border-bottom:2px solid #cccccc;
+	line-height:100%;
 }
 
-form.mall-member-register-form .description{
-	margin:0 0 2px 3px;
-	color:#818181;
-}
-
-form.mall-member-register-form .group{
-	margin-bottom:10px;
-	border:1px solid #99d0ff;
-	/*border-radius:3px;*/
-	-moz-border-radius:3px;
-    -webkit-border-radius:3px;
-}
-
-form.mall-member-register-form .group .row{
-	/*border-bottom:1px solid #99d0ff;*/
-	color:#777777;
-}
-
-form.mall-member-register-form .group .row:last-child{
-	border-bottom:0;
-}
-
-form.mall-member-register-form .group .row .caption{
-	display:none;
-	height:32px;
-	padding:9px 10px;
-	width:153px;
-	border-right:1px solid #99d0ff;
-	background-color:#e9f6ff;
-	box-sizing:border-box;
-}
-
-form.mall-member-register-form .group .row input[type='text'], form.mall-member-register-form .group .row input[type='email'], form.mall-member-register-form .group .row input[type='password']{
-	
-	height: 28px;
-	width:100%;
-	padding:5px 10px;
-	border:0;
-	box-sizing:border-box;
-}
-
- form.mall-member-register-form .group .row.logged_in span.account-label{
-	display:inline-block;
-	height: 29px;
-	width:100%;
-	padding:7px 10px;	
-	box-sizing:border-box;
- }
-
-form.mall-member-register-form .group .row select{
-	float:left;
-	height: 32px;
-	width:100%;
-	padding:5px 10px;
+.member-register-form fieldset{
+	padding:0;
 	margin:0;
 	border:0;
-	border-right:1px solid #99d0ff;
-	/*border:1px solid #99d0ff;*/
+}
+
+.member-register-form .row.data-set{
+	margin-bottom:10px;
+}
+
+.member-register-form .row.data-set > .caption{
+	display:none;
+	float:left;
+	width:145px;
+	padding:10px 0;
+	font-weight:bold;
+	color:#7a7a7a;
 	box-sizing:border-box;
 }
 
-form.mall-member-register-form .group .row select[name='gender'], form.mall-member-register-form .group .row select[name='field_gender']{
+.member-register-form .row.data-set.terms > .caption{
+	padding:0;	
+}
+
+.member-register-form .row.data-set > .text{
+	position:relative;
+	padding-left:37px;
+	overflow:hidden;
+}
+
+.member-register-form .row.data-set > .text:before{
+	position:absolute;
+	left:0;
+	top:0;
+	background-color:#e2e2e2;
+}
+
+.member-register-form .row.data-set.email > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/email.png");
+}
+
+.member-register-form .row.data-set.full_name > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/name.png");
+}
+
+.member-register-form .row.data-set.mobile > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/mobile.png");
+}
+
+.member-register-form .row.data-set.username > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/username.png");
+}
+
+.member-register-form .row.data-set.password > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/password.png");
+}
+
+.member-register-form .row.data-set.confirm_password > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/confirm_password.png");
+}
+
+
+.member-register-form .row.data-set.terms > .text{
+	padding-left:0;
+}
+
+.member-register-form .row.data-set.birth-date > .caption{
+	display:block;	
+	height:37px;
+	width:90px;
+	padding:11px 10px;
+	background-color:#e2e2e2;
+}
+
+.member-register-form .row.data-set.birth-date > .text{
+	padding-left:0;
+}
+
+.member-register-form .row.data-set.gender, .member-register-form .row.data-set.terms {
+	margin-left:10px;
+}
+
+.member-register-form .row.data-set.gender:after{
+	display: table;
+	content: "";	
+	clear: both;
+}
+
+.member-register-form .row.data-set.gender > .text{	
+	float:left;
+	padding:10px 0;
+	margin-right:5px;
+}
+
+.member-register-form .row.data-set > .text input[type='text'],.member-register-form .row.data-set > .text input[type='password'],.member-register-form .row.data-set > .text input[type='email']{	
 	width:100%;
-}
-
-form.mall-member-register-form .group .row select:last-child{
 	border:0;
+	padding:10px 10px 10px 5px;
+	color:#a9a9a9;
+	background-color:#f1f1f1;
+	box-sizing:border-box;
 }
 
-form.mall-member-register-form .group .row .is-logged-in{
-	display:inline-block;
-	padding:5px 10px;
-}
-/**/
-form.mall-member-register-form .row a{
-	color:#ff5757;
+
+/*row distinct design*/
+.member-register-form .row.data-set.month > label, .member-register-form .row.data-set.day > label, .member-register-form .row.data-set.year > label{
+	display:none;
 }
 
-form.mall-member-register-form .buttons{
+.member-register-form .row.data-set.month, .member-register-form .row.data-set.day, .member-register-form .row.data-set.year{
+	float:left;
+}
+
+.member-register-form .row.data-set.month{
+	width:40%;
+}
+.member-register-form .row.data-set.day{
+	width:22%;
+}
+.member-register-form .row.data-set.year{
+	width:38%;	
+}
+
+.member-register-form .row.data-set.month select, .member-register-form .row.data-set.day select, .member-register-form .row.data-set.year select{
+	width:100%;	
+	padding:10px;	
+	border:0;
+	border-right:1px solid #fff;
+	background-color:#f1f1f1;
+	box-sizing:border-box;
+}
+/*eo row distinct design*/
+.member-register-form .buttons{
+	width:100%;
+	margin-left:0;
 	text-align:center;
 }
 
-form.mall-member-register-form .buttons input[type='submit']{
-	float:left;
-	display:inline-block;
-	height:30px;
-	width:70%;
-	padding:5px 15px;
-	border:0;
-	border-radius:3px;	
-	background-color:#1886c5;
-	color:#ffffff;
+.member-register-form .buttons input[type='submit'], .member-register-form .buttons a{	
+	height:40px;
+	width:40%;
+	padding:10px 0;	
+	border-radius:2px;
+	font-size:1.3em;
 	font-weight:bold;
+	color:#fff;	
 	box-sizing:border-box;
+	text-align:center;
 }
 
-form.mall-member-register-form .buttons .cancel{
-	float:left;
-	display:inline-block;
-	height:30px;
-	width:30%;
-	padding:5px 15px;
-	color:#ff5858;
-	font-weight:bold;
-	box-sizing:border-box;
-}
-/**/
-
-form.mall-member-register-form .group td:first-child{
-	display:none;
-}
-
-/*override*/
-form.mall-member-register-form fieldset{
+.member-register-form .buttons input[type='submit']{
+	margin-right:5px;
 	border:0;
+	background-color:#297fb8;
 }
 
-.mall-page .contentform.mall-member-register-form{
-	padding:0;
+.member-register-form .buttons a{
+	display:inline-block;
+	background-color:#e84c3d;
 }
-/*eo override*/
 
-@media all and ( min-width: 400px ) {
-	form.mall-member-register-form .group > .row{
-		display:table-row;
+@media all and ( min-width: 360px ) {
+	.member-register-form .row.data-set.gender, .member-register-form .row.data-set.terms {
+		margin-left:0;
+	}
+
+	.member-register-form .buttons input[type='submit'], .member-register-form .buttons a{			
+		width:160px;
+	}
+}
+
+@media all and ( min-width: 480px ) {
+	.member-register-form .row.data-set > .text{
+		padding-left:0;
+	}
+
+	.member-register-form .row.data-set > .text input[type='text'], .member-register-form .row.data-set > .text input[type='password'], .member-register-form .row.data-set > .text input[type='email']{
+		padding:10px 10px 10px 42px;
+	}
+
+	.member-register-form .row.data-set > .caption{
+		display:block;
 	}
 	
-	form.mall-member-register-form .row > label, form.mall-member-register-form .row > div{
-		display:table-cell;		
+	.member-register-form .row.data-set.birth-date > .caption{				
+		width:145px;
+		padding:11px 0;
+		background-color:transparent;
 	}
 	
-	form.mall-member-register-form .group td:first-child{
-		display:table-cell;
+	.member-register-form .row.data-set.month > label, .member-register-form .row.data-set.day > label, .member-register-form .row.data-set.year > label{
+		display:none;
 	}
 	
-	form.mall-member-register-form .group .row .caption{
-		display:inline-block;
+	.member-register-form .row.data-set > .text:before{
+		background-color:transparent;
+	}	
+	
+	.member-register-form .row.data-set > .text input[type='text'], .member-register-form .row.data-set > .text input[type='password'], .member-register-form .row.data-set > .text input[type='email']{
+		width:301px;
+	}
+
+	.member-register-form .row.data-set.month{
+		width:156.4px;
+	}
+	.member-register-form .row.data-set.day{
+		width:65px;
+	}
+	.member-register-form .row.data-set.year{
+		width:81px;	
 	}
 	
-	/*
-	*placeholder
-	*works on chrome, firefox, IE, Opera
-	*/
-	form.mall-member-register-form input::-webkit-input-placeholder {
-		color: transparent;
-	}
-	form.mall-member-register-form input::-moz-placeholder {
-		color: transparent;
-	}
-	form.mall-member-register-form input:-ms-input-placeholder {
-		color: transparent;
-	}
-	form.mall-member-register-form input:-moz-placeholder {
-		color: transparent;
+}
+
+@media all and ( min-width: 510px ) {
+	.member-register-form .buttons{
+		width:329px;
+		margin-left:150px;
 	}
 }

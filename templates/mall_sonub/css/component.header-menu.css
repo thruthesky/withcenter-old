@@ -32,8 +32,8 @@ header .bottom .inner a.menu{
 	box-sizing:border-box;
 }
 
-header .bottom .inner a.menu:hover{
-	
+header .bottom .inner a.menu.add{
+	color:yellow;
 }
 
 header .bottom .inner a.menu.selected, header .bottom .inner a.menu.hover{
