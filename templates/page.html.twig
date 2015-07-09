@@ -9,6 +9,7 @@
     }
 </script>
 {% import dir_macro ~ '/functions.html.twig' as f  %}
+{{ sub_theme }}
 {% if sub_theme %}
     {% include dir_sub_theme ~ '/page.html.twig' %}
 {% else %}

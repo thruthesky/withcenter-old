@@ -42,3 +42,17 @@ mall_sonub:
   js:
     templates/mall_sonub/js/mall_philgo.js: {}
 
+
+drupalkorea:
+  version: 1.x
+  css:
+    theme:
+      templates/drupalkorea/css/component.header-top.css: {}
+      templates/drupalkorea/css/component.header-logo-and-search.css: {}
+      templates/drupalkorea/css/component.header-menu.css: {}
+      templates/drupalkorea/css/component.footer.css: {}
+      templates/drupalkorea/css/component.front-page.css: {}
+      templates/drupalkorea/css/theme.css: {}
+  js:
+    templates/drupalkorea/js/drupalkorea.js: {}
+
