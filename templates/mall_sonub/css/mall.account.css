@@ -14,11 +14,11 @@
 	border:0;
 }
 
-.member-register-form .row.data-set{
+.member-register-form .row{
 	margin-bottom:10px;
 }
 
-.member-register-form .row.data-set > .caption{
+.member-register-form .row.data-set > .caption, .member-register-form .row > .caption{
 	display:none;
 	float:left;
 	width:145px;
@@ -32,13 +32,20 @@
 	padding:0;	
 }
 
-.member-register-form .row.data-set > .text{
+.member-register-form .row.data-set > .text, .member-register-form .row > .text{
 	position:relative;
 	padding-left:37px;
 	overflow:hidden;
 }
 
-.member-register-form .row.data-set > .text:before{
+.member-register-form .row.username.update > .text{	
+	padding:10px 10px 10px 42px;	
+	background-color: #f1f1f1;
+	color: #a9a9a9;
+	box-sizing:border-box;
+}
+
+.member-register-form .row.data-set > .text:before, .member-register-form .row > .text:before{
 	position:absolute;
 	left:0;
 	top:0;
@@ -57,7 +64,7 @@
 	content:url("/themes/withcenter/templates/mall_sonub/img/member/mobile.png");
 }
 
-.member-register-form .row.data-set.username > .text:before{	
+.member-register-form .row.username > .text:before{	
 	content:url("/themes/withcenter/templates/mall_sonub/img/member/username.png");
 }
 
@@ -106,8 +113,8 @@
 	width:100%;
 	border:0;
 	padding:10px 10px 10px 5px;
-	color:#a9a9a9;
 	background-color:#f1f1f1;
+	color:#a9a9a9;	
 	box-sizing:border-box;
 }
 
@@ -180,7 +187,7 @@
 }
 
 @media all and ( min-width: 480px ) {
-	.member-register-form .row.data-set > .text{
+	.member-register-form .row.data-set > .text, .member-register-form .row > .text{
 		padding-left:0;
 	}
 
@@ -188,7 +195,7 @@
 		padding:10px 10px 10px 42px;
 	}
 
-	.member-register-form .row.data-set > .caption{
+	.member-register-form .row.data-set > .caption,.member-register-form .row > .caption{
 		display:block;
 	}
 	
@@ -202,9 +209,13 @@
 		display:none;
 	}
 	
-	.member-register-form .row.data-set > .text:before{
+	.member-register-form .row.data-set > .text:before, .member-register-form .row > .text:before{
 		background-color:transparent;
 	}	
+	
+	.member-register-form .row.username.update > .text{
+		width:301px;
+	}
 	
 	.member-register-form .row.data-set > .text input[type='text'], .member-register-form .row.data-set > .text input[type='password'], .member-register-form .row.data-set > .text input[type='email']{
 		width:301px;
