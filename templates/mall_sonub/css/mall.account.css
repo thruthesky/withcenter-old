@@ -41,7 +41,7 @@
 .member-form .row.username.update > .text{	
 	padding:10px 10px 10px 42px;	
 	background-color: #f1f1f1;
-	color: #a9a9a9;
+	/*color: #a9a9a9;*/
 	box-sizing:border-box;
 }
 
@@ -114,7 +114,7 @@
 	border:0;
 	padding:10px 10px 10px 5px;
 	background-color:#f1f1f1;
-	color:#a9a9a9;	
+	/*color:#a9a9a9;*/
 	box-sizing:border-box;
 }
 
