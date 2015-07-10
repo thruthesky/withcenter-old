@@ -1,13 +1,13 @@
+{{ attach_library( theme ~ '/drupalkorea-member' ) }}
 {% set member = data.member %}
 {% import dir_macro ~ '/html.html.twig' as html %}
-{{ error_message | raw }}
 <form class='member-register-form member-form'>
     <fieldset>
         <input type="hidden" name="mode" value="submit">       			
 			{% if member %}
-				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}
+				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'회원 아이디'}) }}
 			{% else %}
-				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value':'', 'label':'User ID', 'placeholder':'User ID'}) }}
+				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value':'', 'label':'회원 아이디', 'placeholder':'아이디를 입력하십시오.'}) }}
 				{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
 				{{ html.input({'type':'password','name':'confirm_password', 'id':'register-confirm_password', 'class':'confirm_password', 'value':'', 'label':'Confirm Password', 'placeholder':'Confirm Password'}) }}
 			{% endif %} 
@@ -31,13 +31,7 @@
 			{'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
 				])
 			}}
-			
-			<div class='row data-set terms'>
-				<label class='caption'>&nbsp</label>					
-				<div class='text'>
-					<input type='checkbox' name='terms'> I have read the <a href='#'>Sonub term and Privacy</a>
-				</div>
-			</div>	
+
 			
 			{% if member %}
 				{% set submit_text = "Update" %}

@@ -59,3 +59,7 @@ drupalkorea:
   js:
     templates/drupalkorea/js/drupalkorea.js: {}
 
+drupalkorea-member:
+  css:
+    theme:
+      templates/drupalkorea/css/drupalkorea.member-form.css: {}
