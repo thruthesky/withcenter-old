@@ -25,6 +25,7 @@ function callback_slide_nav_menu(){
 
 function callback_menu_class(){	
 	$this = $(this);		
+	if( $this.hasClass('add') ) return;
 	if( $this.hasClass('selected') ) return;
 	if( $this.hasClass('hover') ) $this.removeClass('hover');
 	else $this.addClass('hover');	

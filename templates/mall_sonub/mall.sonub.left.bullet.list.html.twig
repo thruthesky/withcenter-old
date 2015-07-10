@@ -1,8 +1,0 @@
-{% set posts = data.sidebar_post_bullet %}
-
-<div class='bulleted-list'>
-	<div class='title {{ language }}'><script>ln('Latest Posts,최근 글');</script></div>
-	{% for p in posts %}
-		<a class="{{ language }}" href='/post/{{ p.config_id.entity.name.value  }}/{{ p.id.value }}'>{{ p.title.value }}</a>
-	{% endfor %}
-</div>
