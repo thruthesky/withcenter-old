@@ -1,7 +1,7 @@
 {% set member = data.member %}
 {% import dir_macro ~ '/html.html.twig' as html %}
 {{ error_message | raw }}
-<form class='member-register-form'>
+<form class='member-register-form member-form'>
     <fieldset>
         <input type="hidden" name="mode" value="submit">       			
 			{% if member %}

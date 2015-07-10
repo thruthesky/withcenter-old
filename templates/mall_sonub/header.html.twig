@@ -1,3 +1,6 @@
 {% include dir_sub_theme ~ '/header.top.html.twig' %}
 {% include dir_sub_theme ~ '/header.logo-search.html.twig' %}
-{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+
+{% if not remove_menu %}
+	{% include dir_sub_theme ~ '/header.menu.html.twig' %}
+{% endif %}
