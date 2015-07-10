@@ -1,1 +1,5 @@
-.content
+{% if is_front %}
+    {% include dir_sub_theme ~ '/first-page.html.twig' %}
+{% else %}
+    {{ page.content }}
+{% endif %}

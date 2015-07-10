@@ -47,12 +47,15 @@ drupalkorea:
   version: 1.x
   css:
     theme:
-      templates/drupalkorea/css/component.header-top.css: {}
-      templates/drupalkorea/css/component.header-logo-and-search.css: {}
-      templates/drupalkorea/css/component.header-menu.css: {}
-      templates/drupalkorea/css/component.footer.css: {}
-      templates/drupalkorea/css/component.front-page.css: {}
-      templates/drupalkorea/css/theme.css: {}
+      templates/drupalkorea/css/drupalkorea.base.css: {}
+      templates/drupalkorea/css/drupalkorea.layout.css: {}
+      templates/drupalkorea/css/drupalkorea.component.css: {}
+      templates/drupalkorea/css/drupalkorea.header-top.css: {}
+      templates/drupalkorea/css/drupalkorea.header-logo-search.css: {}
+      templates/drupalkorea/css/drupalkorea.header-menu.css: {}
+      templates/drupalkorea/css/drupalkorea.footer.css: {}
+      templates/drupalkorea/css/drupalkorea.front-page.css: {}
+      templates/drupalkorea/css/drupalkorea.theme.css: {}
   js:
     templates/drupalkorea/js/drupalkorea.js: {}
 

@@ -1,0 +1,37 @@
+.header-top {
+    position:relative;
+    padding:.4em .6em;
+    background-color:#004466;
+}
+.header-top:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+.header-top-inner {
+    margin:0 auto;
+    max-width:960px;
+}
+.header-top a {
+    display:inline-block;
+    background-color:white;
+    margin:.3em 0;
+    padding:.4em;
+    border-radius: 2px;
+    color:#004466;
+}
+@media all and (min-width:740px) {
+    .header-top .left  {
+        float:left;
+    }
+    .header-top .right  {
+        float:right;
+    }
+}
+
+@media all and (min-width:980px) {
+    .header-top {
+        padding-left:0;
+        padding-right:0;
+    }
+}
