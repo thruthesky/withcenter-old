@@ -322,6 +322,7 @@
 	.member-form .row.username.update > .text{
 		width:301px;
 	}
+	
 	/*
 	.member-form .row.data-set > .text input[type='text'], .member-form .row.data-set > .text input[type='password'], .member-form .row.data-set > .text input[type='email']{
 		width:301px;
@@ -349,7 +350,7 @@
 	}
 	
 	.user-login-form.member-form .row.data-set > .text{
-		/*width:100%;*/
+		width:auto;
 	}
 	
 	.user-login-form.member-form .row.data-set > .text input[type='text'], .user-login-form.member-form .row.data-set > .text input[type='password']{
