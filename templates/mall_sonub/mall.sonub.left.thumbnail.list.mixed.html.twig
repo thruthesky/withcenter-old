@@ -1,0 +1,32 @@
+{#
+this uses 
+data.sidebar_post_thumbnail.entity
+and
+data.sidebar_post_thumbnail.first_image_thumbnail
+#}
+
+{% set posts = data.sidebar_post_thumbnail_mixed %}
+<section class='list thumbnail-list mixed'>
+	<div class='title {{ language }}'>
+		<script>ln('Popular Posts,최신 인기글');</script>
+		<div class='arrow-wrapper'>{# so the arrow can always be at the middle #}
+			<div class='arrow down'></div>
+		</div>
+	</div>
+	{% for p in posts %}
+	<a href='/post/{{ p.entity.config_id.entity.name.value  }}/{{ p.entity.id.value }}'>
+		<div class='item clearfix' >
+			{% if p.first_image_thumbnail.url_thumbnail %}
+				{% set icon = 'photo.png' %}
+				<div class='photo'><img src='{{ p.first_image_thumbnail.url_thumbnail }}'/></div>
+			{% else %}
+				{% set icon = 'audio.png' %}
+			{% endif %}
+			<div class='info {{ language }}'>
+				<img src='/{{ dir_sub_theme }}/img/post/{{ icon }}'/>
+				{{ p.entity.title.value }}
+			</div>
+		</div>
+	</a>
+	{% endfor %}
+</section>

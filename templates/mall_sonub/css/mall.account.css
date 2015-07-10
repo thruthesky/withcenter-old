@@ -180,6 +180,7 @@
 /*user-login-form unique*/
 .form-wrapper.login{
 	min-height:320px;
+	padding-bottom:20px;
 	background-color:#ecf0f1;
 	border-radius:3px;
 	box-sizing:border-box;
@@ -362,7 +363,7 @@
 
 @media all and ( min-width: 640px ) {
 	.user-login-form.member-form .buttons input[type='submit'], .user-login-form.member-form.member-form .buttons a{		
-		width:195px;
+		width:45%;
 		margin-bottom:0;
 	}
 	
