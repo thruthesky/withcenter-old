@@ -11,8 +11,13 @@
         <div class="right">
             <a href="/post/drupal-study-group">스터디그룹</a>
             <a href="/post/drupal-inquery">제작의뢰</a>
-            <a href="/member/login">로그인</a>
-            <a href="/member/register">회원가입</a>
+            {% if logged_in %}
+                <a href="/member/update">회원정보</a>
+                <a href="/user/logout">로그아웃</a>
+            {% else %}
+                <a href="/member/login">로그인</a>
+                <a href="/member/register">회원가입</a>
+            {% endif %}
         </div>
     </div>
 </div>
