@@ -1,18 +1,21 @@
 <div class="logo-and-search">
-	<a href="/"><img src="/themes/withcenter/templates/mall_sonub/img/sonub_market_logo.png"></a>
-	<form class="search" action='/mall/item/search'>
-		<table cellpadding="0" cellspacing="0" width="100%">
-			<tr valign="top">
-				<td width="95%"><input type="text" name="keyword" placeholder="Search in Market(Product,Brand,Shops)"></td>
-				<td width="93">
-					<div class='submit-wrapper'>
-						<input type="submit" value="Search">
-					</div>
-				</td>
-			</tr>
-		</table>
-	</form>
-	<div class='advance-search'>
-		<a href='/mall/item/search'>Advance Search</a>
-	</div>
+    <a href="/"><img src="/themes/withcenter/templates/mall_sonub/img/sonub_market_logo.png"></a>
+    <form class="search" action='/mall/item/search'>
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr valign="top">
+                <td width="95%"><input type="text" name="keyword" placeholder="{{ ko ? '상품을 검색하십시오.' : 'Search in Market(Product,Brand,Shops)' }}"></td>
+                <td width="93">
+                    <div class='submit-wrapper'>
+                        <input type="submit" value="Search">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class='advance-search'>
+        <a href='/mall/item/search'>Advance Search</a>
+    </div>
 </div>
+<script>
+    setval('Search,검색', '.submit-wrapper input');
+</script>

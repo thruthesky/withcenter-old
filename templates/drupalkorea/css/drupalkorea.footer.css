@@ -1,0 +1,11 @@
+footer .copyright {
+    position:relative;
+    padding:1em;
+    text-align: center;
+    background-color: #f0f0ff;
+}
+
+footer .copyright-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}

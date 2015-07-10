@@ -192,7 +192,6 @@ header table.menu-table td.search .item.more960{
 }
 
 @media all and ( min-width: 320px ) { /** 320px and above */
-    header table.menu-table td.knowledge,
     header table.menu-table td.ask {
         display:table-cell;
     }
@@ -239,13 +238,6 @@ header table.menu-table td.search .item.more960{
 
 
 @media all and ( min-width: 640px ) { /* 640px and above */
-    /*header table.menu-table td.job,
-    header table.menu-table td.news,
-    header table.menu-table td.music {
-        display:table-cell;
-    }
-	*/
-	
 	header table.menu-table td.job,
 	header table.menu-table td.news,
 	header table.menu-table td.music,
