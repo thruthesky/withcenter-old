@@ -7,6 +7,7 @@ var mall_top_total_items = 0;
 var mall_top_animation_counter = 0;
 var mall_top_is_animating = false;
 
+var timeout_confirm_password;
 $(function(){	
 	if( $(".top-items.banner").length ){
 		getInitialVariables();
@@ -16,8 +17,30 @@ $(function(){
 	$("body").on( "click",".layout > header .top table.menu-table .item.more", callback_slide_nav_menu );
 	
 	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class );
-	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );		
+	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );
+
+	//$("body").on( "keyup",".member-form .row.data-set > .text input[name='confirm_password']", callback_confirm_password );
 });
+/*
+function callback_confirm_password(){
+	clearTimeout( timeout_confirm_password );
+	
+	
+	var $this = $(this);
+	timeout_confirm_password = setTimeout( function(){				
+		if( $this.val() != $(".member-form .row.data-set > .text input[name='password']").val() ){
+			if( $this.parent().find(".form-error").length ) return;
+			$this.parent().append( create_form_error_notice("Passwords does not match.") );
+		}
+		else{
+			$this.parent().find(".form-error").remove();
+		}
+	}, 300);
+}
+*/
+function create_form_error_notice( str ){
+	return "<div class='form-error'>" + str + "</div>";
+}
 
 function callback_slide_nav_menu(){
 	$("header .top nav.menu").slideToggle();
