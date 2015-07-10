@@ -12,6 +12,13 @@
  * @ingroup themeable
  */
 #}
+
+{#
+NOTE by benjamin:
+We should be able to tell that the called form.html.twig is the default login page or not.
+If we don't do that, all form.html.twig will be login page.
+Though I haven't any other use for this file on mall_sonub just yet.
+#}
 {% set classes = ['member-form'] %}
 
 {% import dir_macro ~ '/html.html.twig' as html %}
@@ -26,7 +33,7 @@
 			<a class='forgot-password' href='#'>Forgot Password?</a>
 		</div>
 		<div class='buttons'>
-			<input type="submit" id="edit-submit" name="op" value="Log in" class="button js-form-submit form-submit"><a href='#'>Create an Account</a>
+			<input type="submit" id="edit-submit" value='Log In'><a href='#'>Create an Account</a>
 		</div>
 	</form>
 </div>
