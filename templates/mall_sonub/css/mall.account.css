@@ -39,7 +39,7 @@
 }
 
 .member-form .row.data-set > .text, .member-form .row > .text{
-	position:relative;
+	position:relative;	
 	padding-left:37px;
 	overflow:hidden;
 }
@@ -151,6 +151,10 @@
 	border-right:1px solid #fff;
 	background-color:#f1f1f1;
 	box-sizing:border-box;
+}
+
+.member-form .row.data-set.year select{
+	border-right:0;
 }
 /*eo row distinct design*/
 .member-form .buttons{
@@ -318,21 +322,19 @@
 	.member-form .row.username.update > .text{
 		width:301px;
 	}
-	
+	/*
 	.member-form .row.data-set > .text input[type='text'], .member-form .row.data-set > .text input[type='password'], .member-form .row.data-set > .text input[type='email']{
 		width:301px;
 	}
-
-	.member-form .row.data-set.month{
-		width:156.4px;
-	}
-	.member-form .row.data-set.day{
-		width:65px;
-	}
-	.member-form .row.data-set.year{
-		width:81px;	
+	*/
+	.member-form .row.data-set.gender > .text{
+		width:70px;
 	}
 	
+	.member-form .row.data-set > .text{
+		width:301px;
+	}
+
 	/*user-login-form*/
 	.user-login-form.member-form {
 		padding:0 100px;

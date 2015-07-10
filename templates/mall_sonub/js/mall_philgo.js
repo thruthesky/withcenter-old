@@ -19,25 +19,30 @@ $(function(){
 	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class );
 	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );
 
-	//$("body").on( "keyup",".member-form .row.data-set > .text input[name='confirm_password']", callback_confirm_password );
+	$("body").on( "keyup",".member-form .row.data-set > .text input[name='confirm_password']", callback_confirm_password );
+	$("body").on( "keyup",".member-form .row.data-set > .text input[name='password']", callback_confirm_password );
 });
-/*
+
 function callback_confirm_password(){
 	clearTimeout( timeout_confirm_password );
-	
-	
 	var $this = $(this);
+	$selector = $(".member-form .row.confirm_password");
 	timeout_confirm_password = setTimeout( function(){				
-		if( $this.val() != $(".member-form .row.data-set > .text input[name='password']").val() ){
-			if( $this.parent().find(".form-error").length ) return;
-			$this.parent().append( create_form_error_notice("Passwords does not match.") );
+		if( $(".member-form .row.data-set > .text input[name='password']").val() == "" ){
+			$selector.find(".form-error").remove();
+			return;
+		}
+		
+		if( $(".member-form .row.data-set > .text input[name='password']").val() != $(".member-form .row.data-set > .text input[name='confirm_password']").val() ){
+			if( $selector.parent().find(".form-error").length ) return;
+			$selector.find(".text").append( create_form_error_notice("Does not match with the password.") );
 		}
 		else{
-			$this.parent().find(".form-error").remove();
+			$selector.find(".form-error").remove();
 		}
 	}, 300);
 }
-*/
+
 function create_form_error_notice( str ){
 	return "<div class='form-error'>" + str + "</div>";
 }
