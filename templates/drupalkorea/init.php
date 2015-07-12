@@ -16,7 +16,7 @@ if( ! empty($variables['is_front']) ) {
     ]);
 
     $variables['data']['post']['drupal_help'] = PostData::search([
-        'post_config_name' => 'drupal-ask',
+        'post_config_name' => 'drupal-help',
         'order_field' => 'created',
         'order_direction' => 'DESC',
         'limit'=>'10'
