@@ -1,7 +1,11 @@
 <?php
 use Drupal\post\Entity\PostData;
 
-if( $hook == 'page' ){
+/**
+ * @todo Bug - This should not be called in every page. It should be called only on front page.
+ *  Use $variable[is_front] instead.
+ */
+if( $hook == 'page' ) {
 	$post_with_thumbnail_mixed = PostData::search([										
 										//'fid_of_first_image' => true,
 										'order_field' => 'created',

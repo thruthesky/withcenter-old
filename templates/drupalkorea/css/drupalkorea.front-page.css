@@ -1,0 +1,33 @@
+.front-page .post-latest {
+    font-family: "Malgun Gothic", AppleGothic, serif;
+}
+.front-page .post-latest .post-group {
+    padding:1em;
+    background-color: #F7F7F7;
+    min-height:16em;
+}
+
+.front-page .post-latest .post-group .caption {
+    margin-bottom:.4em;
+    font-size:1.2em;
+}
+
+
+
+
+.front-page .grid4 > div > div {
+    margin-bottom:.4em;
+    box-sizing: border-box;
+}
+@media all and ( min-width: 480px ) {
+    .front-page .grid4 .a { padding-right:5px;}
+    .front-page .grid4 .b { padding-left:5px;}
+    .front-page .grid4 .c { padding-right:5px;}
+    .front-page .grid4 .d { padding-left:5px;}
+}
+@media all and ( min-width: 800px ) {
+    .front-page .grid4 .a { padding:0 7.5px 0 0;}
+    .front-page .grid4 .b { padding:0 5px 0 2.5px ;}
+    .front-page .grid4 .c { padding:0 2.5px 0 5px;}
+    .front-page .grid4 .d { padding:0 0 0 7.5px;}
+}

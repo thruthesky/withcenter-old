@@ -1,0 +1,19 @@
+{% macro display_post_latest(title, posts) %}
+    <div class="post-group">
+        <div class="caption">{{ title }}</div>
+        {% for post in posts %}
+            <div class='row post' pid="{{ post.id.value }}">
+                <a href="#">
+                    <span class="title">{{ post.label }}</span>
+                        <span class="date">
+                            {% if 'now' | date ('Ymd') == post.created.value | date('Ymd') %}
+                                {{ post.created.value | date('H:i') }}
+                            {% else %}
+                                {{ post.created.value | date('m/d') }}
+                            {% endif %}
+                        </span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

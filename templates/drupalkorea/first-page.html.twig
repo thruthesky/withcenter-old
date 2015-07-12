@@ -1,1 +1,11 @@
-front page
+{% import dir_sub_theme ~ '/macro/drupalkorea.macro.html.twig' as m %}
+<div class="front-page">
+    <section class="post-latest grid4">
+        <div class="content">
+            <div class="a">{{ m.display_post_latest( '자유토론', data.post.drupal_freetalk ) }}</div>
+            <div class="b">{{ m.display_post_latest( '질문과답변', data.post.drupal_ask ) }}</div>
+            <div class="c">{{ m.display_post_latest( '도움요청', data.post.drupal_help ) }}</div>
+            <div class="d">{{ m.display_post_latest( '드루팔 강좌', data.post.drupal_tip ) }}</div>
+        </div>
+    </section>
+</div>

@@ -11,3 +11,11 @@ section.layout > footer
     width: 100%;
     max-width:100%;
 }
+
+section.layout > .content {
+    margin:0 .2em;
+}
+
+@media all and ( min-width: 780px ) {
+    section.layout > .content { margin:0 auto; }
+}
