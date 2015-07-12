@@ -1,6 +1,9 @@
 <?php
 use Drupal\post\Entity\PostData;
 
+$variables['module']['mall'] = true;
+
+
 /**
  * @todo Bug - This should not be called in every page. It should be called only on front page.
  *  Use $variable[is_front] instead.
