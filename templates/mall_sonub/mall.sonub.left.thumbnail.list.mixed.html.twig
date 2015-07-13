@@ -5,7 +5,8 @@ and
 data.sidebar_post_thumbnail.first_image_thumbnail
 #}
 
-{% set posts = data.sidebar_post_thumbnail_mixed %}
+{% set items = data.sidebar_post_thumbnail_mixed.items %}
+
 <section class='list thumbnail-list mixed'>
 	<div class='title {{ language }}'>
 		<script>ln('Popular Posts,최신 인기글');</script>
@@ -13,18 +14,19 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 			<div class='arrow down'></div>
 		</div>
 	</div>
-	{% for p in posts %}
-	<a href='/post/{{ p.entity.config_id.entity.name.value  }}/{{ p.entity.id.value }}'>
+	{% for i in items %}
+	{% set thumbnail = i.images.item_image_thumbnail[0].url_thumbnail %}
+	<a href='/post/{{ i.entity.config_id.entity.name.value  }}/{{ i.entity.id.value }}'>
 		<div class='item clearfix' >
-			{% if p.first_image_thumbnail.url_thumbnail %}
+			{% if thumbnail %}
 				{% set icon = 'photo.png' %}
-				<div class='photo'><img src='{{ p.first_image_thumbnail.url_thumbnail }}'/></div>
+				<div class='photo'><img src='{{ thumbnail }}'/></div>
 			{% else %}
 				{% set icon = 'audio.png' %}
 			{% endif %}
 			<div class='info {{ language }}'>
 				<img src='/{{ dir_sub_theme }}/img/post/{{ icon }}'/>
-				{{ p.entity.title.value }}
+				{{ i.entity.title.value }}
 			</div>
 		</div>
 	</a>

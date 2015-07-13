@@ -1,5 +1,6 @@
 <?php
 use Drupal\post\Entity\PostData;
+use Drupal\mall\Entity\Item;
 
 $variables['module']['mall'] = true;
 
@@ -9,7 +10,7 @@ $variables['module']['mall'] = true;
  *  Use $variable[is_front] instead.
  */
 if( $hook == 'page' ) {
-	$post_with_thumbnail_mixed = PostData::search([										
+	/*$post_with_thumbnail_mixed = PostData::search([										
 										//'fid_of_first_image' => true,
 										'order_field' => 'created',
 										'order_direction' => 'DESC',
@@ -19,9 +20,8 @@ if( $hook == 'page' ) {
 	$pwt = [];
 	foreach( $post_with_thumbnail_mixed as $post ){		
 		$file_entity = $post->fid_of_first_image->entity;
-		/*
-		*I need thumbnails...
-		*/
+		//I need thumbnails...
+
 		if( $file_entity ){
 			$file_url = [];
 			$file_url['fid'] = $file_entity->id();
@@ -36,8 +36,10 @@ if( $hook == 'page' ) {
 			$pwt[ $post->id() ]['entity'] = $post;		
 	}
 	$variables['data']['sidebar_post_thumbnail_mixed'] = $pwt;
-		
-									
+		*/
+	
+	$variables['data']['sidebar_post_thumbnail_mixed'] = Item::getItemsWithImages( ['limit'=>'5','by'=>'created','order'=>'DESC' ] );
+	
 	$post_with_thumbnail = PostData::search([
 										'fid_of_first_image' => true,
 										'order_field' => 'created',
