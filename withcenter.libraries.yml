@@ -62,3 +62,8 @@ drupalkorea-member:
   css:
     theme:
       templates/drupalkorea/css/drupalkorea.member-form.css: {}
+
+drupalkorea-member-login:
+  css:
+    theme:
+      templates/drupalkorea/css/drupalkorea.member-login.css: {}

@@ -1,16 +1,1 @@
-{% import dir_macro ~ '/html.html.twig' as html %}
-<div class='form-wrapper login'>
-	<div class='title'>Sign in</div>
-	<form class='user-login-form member-form'>
-		<fieldset>
-		<input type="hidden" name="mode" value="submit">
-		{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value':'', 'label':'User ID', 'placeholder':'User ID'}) }}
-		{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
-		<div class='forgot-password-wrapper'><a class='forgot-password' href='#'>Forgot Password?</a></div>
-		<div class='buttons'>
-			<input type="submit" role="button" value="Log In">
-			<a href='/member/register'>Create an Account</a>
-		</div>
-		</fieldset>
-	</form>
-</div>
+{% include dir_sub_theme ~ '/member.login.html.twig' %}
