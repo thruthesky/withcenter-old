@@ -120,10 +120,9 @@
 /*eo nav.menu*/
 
 /** 1px and above **/
-header table.menu-table td.job,
+header table.menu-table td.market,
 header table.menu-table td.news,
 header table.menu-table td.music,
-header table.menu-table td.ask,
 header table.menu-table td.knowledge {
     display:none;
 }
@@ -227,10 +226,10 @@ header table.menu-table td.search .item.more960{
 	.layout-middle, .layout-right, .layout-left{
 		margin-top:55px!important;
 	}
-	
+
+
 	header table.menu-table td.job,
-    header table.menu-table td.news,
-    header table.menu-table td.music {
+    header table.menu-table td.news {
         display:table-cell;
     }
 }
@@ -239,10 +238,8 @@ header table.menu-table td.search .item.more960{
 
 
 @media all and ( min-width: 640px ) { /* 640px and above */
-	header table.menu-table td.job,
-	header table.menu-table td.news,
 	header table.menu-table td.music,
-	header table.menu-table td.ask,
+	header table.menu-table td.market,
 	header table.menu-table td.knowledge {
 		display:table-cell;
 	}
