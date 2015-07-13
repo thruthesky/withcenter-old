@@ -1,5 +1,11 @@
 <div class="logo-and-search">
-    <a href="/"><img src="/themes/withcenter/templates/mall_sonub/img/sonub_market_logo.png"></a>
+	<a href="/">
+		{% if "sonub" in domain %}
+			<img src="{{ url_sub_theme }}/img/logo_sonub.png">
+		{% elseif "philgo" in domain %}
+			<img src="{{ url_sub_theme }}/img/logo_philgo.png">
+		{% endif %}
+	</a>
     <form class="search" action='/mall/item/search'>
         <table cellpadding="0" cellspacing="0" width="100%">
             <tr valign="top">

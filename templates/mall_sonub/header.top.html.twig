@@ -5,7 +5,11 @@
 				<td class="logo">
 					<a href="/">
 						<div class="item">
-							<div class="sprite"></div>
+							{% if "sonub" in domain %}
+								<img src="{{ url_sub_theme }}/img/white_logo_sonub.png">
+							{% elseif "philgo" in domain %}
+								<img src="{{ url_sub_theme }}/img/white_logo_philgo.png">
+							{% endif %}							
 						</div>
 					</a>
 				</td>
