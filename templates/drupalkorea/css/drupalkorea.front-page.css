@@ -12,6 +12,16 @@
     font-size:1.2em;
 }
 
+.front-page .post-latest .post-group .caption .right {
+    font-family: Gulim, serif;
+    font-size:9pt;
+    float:right;
+}
+
+.front-page .post-latest .post-group hr {
+    border:0;
+    border-top:1px solid #68929c;
+}
 
 
 

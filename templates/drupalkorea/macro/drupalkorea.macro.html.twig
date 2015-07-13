@@ -1,6 +1,10 @@
-{% macro display_post_latest(title, posts) %}
+{% macro display_post_latest(title, config_name, posts) %}
     <div class="post-group">
-        <div class="caption">{{ title }}</div>
+        <div class="caption">
+            <a class="left" href='/post/{{ config_name }}'>{{ title }}</a>
+            <a class="right" href="/post/{{ config_name }}">더보기</a>
+        </div>
+        <hr>
         {% for post in posts %}
             <div class='row post' pid="{{ post.id.value }}">
                 <a href="#">
