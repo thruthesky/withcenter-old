@@ -297,7 +297,7 @@ img.fake{
 }
 
 .todays-pick section.grid .item  .info .title{
-    font-size:1em;
+    font-size:1.1em;
 }
 
 .todays-pick section.grid .item  .info .price{
@@ -403,9 +403,9 @@ img.fake{
 
 .todays-pick .item .info.arrow-type-info-1 > div{
     display:inline-block;
-    height:24px;
+    height:26px;
     position:relative;
-    padding:5px 10px;
+	padding: 6px 10px 5px 10px;
     box-sizing:border-box;
 }
 
@@ -417,8 +417,8 @@ img.fake{
     position:absolute;
     right:-12px;
     top:0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
 }
 
 .todays-pick .item .info.arrow-type-info-1 .title{
@@ -427,7 +427,7 @@ img.fake{
 
 .todays-pick .item .info.arrow-type-info-1 .title > span.text{
     display:inline-block;
-    height:13px;
+    height:15px;
     max-width:120px;
     color:#ffffff;
     overflow:hidden;
