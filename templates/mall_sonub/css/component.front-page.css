@@ -291,6 +291,15 @@ img.fake{
     width:50%;
 }
 
+.todays-pick section.grid.top .a .item{
+    border:1px solid #ddd;
+	border-radius:3px;
+}
+
+.todays-pick section.grid.top .a .item .photo{
+    border:0;
+}
+
 .todays-pick section.grid.top .b .item{
     float:left;
     width:50%;
