@@ -90,8 +90,9 @@
     max-width:16em;
     overflow:hidden;
 	z-index:5;
+    font-family: "Malgun Gothic", AppleGothic, serif;
 }
-.layout > header .top nav.menu a{
+.layout > header .top nav.menu a {
 	color:#fff;
 }
 
