@@ -18,6 +18,19 @@ img.fake{
     color:#393939;
 }
 
+/*latest-list title*/
+.title.latest-list{
+	padding: 10px 0;
+	font-size: 1.5em;
+	font-weight:bold;
+	color: #393939;
+}
+
+.title.latest-list > span:first-child{
+	color:#297fb8;
+}
+/*eo latest-list title*/
+
 /*top-items*/
 .top-items.banner{
 	/*display:none;*/
@@ -297,9 +310,11 @@ img.fake{
 }
 
 .todays-pick section.grid .item .photo{
-    position:relative;
-    border:1px solid #b0b0b0;
-    box-sizing:border-box;
+	position: relative;
+	border: 1px solid #b0b0b0;	
+	border-radius: 3px;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .todays-pick .item .info{
@@ -363,9 +378,13 @@ img.fake{
 }
 
 .todays-pick .item .info.circle-type > .title{
-    height: 33px;
+    margin:15px 0 0 90px;    
+}
+
+.todays-pick section.grid .item .info.circle-type > .title{
+    height: 34px;
     width: 110px;
-    font-size:1.2em;
+    font-size:1.1em;
     line-height: 120%;
     overflow: hidden;
 }
@@ -388,6 +407,10 @@ img.fake{
     position:relative;
     padding:5px 10px;
     box-sizing:border-box;
+}
+
+.todays-pick .item .info.arrow-type-info-1 > .price{
+    padding:4px 10px;
 }
 
 .todays-pick .item .info.arrow-type-info-1 .arrow-right{
