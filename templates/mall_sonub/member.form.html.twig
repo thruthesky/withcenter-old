@@ -1,46 +1,48 @@
 {% set member = data.member %}
 {% import dir_macro ~ '/html.html.twig' as html %}
 {{ html.error(data) }}
-<form class='member-register-form member-form' method="post">
-    <fieldset>
-        <input type="hidden" name="mode" value="submit">
-        {% if member %}
-            {{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}
-        {% else %}
-            {{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value': input.username  , 'label':'User ID', 'placeholder':'User ID'}) }}
-            {{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
-            {{ html.input({'type':'password','name':'confirm_password', 'id':'register-confirm_password', 'class':'confirm_password', 'value':'', 'label':'Confirm Password', 'placeholder':'Confirm Password'}) }}
-        {% endif %}
+{% if not data.error %}
+	<form class='member-register-form member-form' method="post">
+		<fieldset>
+			<input type="hidden" name="mode" value="submit">
+			{% if member %}
+				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}
+			{% else %}
+				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value': input.username  , 'label':'User ID', 'placeholder':'User ID'}) }}
+				{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
+				{{ html.input({'type':'password','name':'confirm_password', 'id':'register-confirm_password', 'class':'confirm_password', 'value':'', 'label':'Confirm Password', 'placeholder':'Confirm Password'}) }}
+			{% endif %}
 
-        {{ html.input({'type':'text','name':'full_name', 'id':'register-full_name', 'class':'full_name', 'value':input.full_name | default(member.extra.full_name), 'label':'Full Name', 'placeholder':'Full name'}) }}
-        {{ html.input({'type':'email','name':'mail', 'id':'register-email', 'class':'email', 'value':input.mail | default(member.mail.value), 'label':'Email', 'placeholder':'Email'}) }}
+			{{ html.input({'type':'text','name':'full_name', 'id':'register-full_name', 'class':'full_name', 'value':input.full_name | default(member.extra.full_name), 'label':'Full Name', 'placeholder':'Full name'}) }}
+			{{ html.input({'type':'email','name':'mail', 'id':'register-email', 'class':'email', 'value':input.mail | default(member.mail.value), 'label':'Email', 'placeholder':'Email'}) }}
 
-        {{ html.input({'type':'text','name':'mobile', 'id':'register-mobile', 'class':'mobile', 'value':input.mobile | default(member.extra.mobile), 'label':'Mobile no.', 'placeholder':'eg. 09057896348'}) }}
-        <div class='row data-set birth-date'>
-            <label class='caption'>Birthdate</label>
-            <div class='text clearfix'>
-                {{ html.select_month({'name':'month', 'label':'', 'default': member.extra.month }) }}
-                {{ html.select_number({'name':'day', 'from':1, 'to':31, 'label':'', 'default':member.extra.day}) }}
-                {{ html.select_number({'name':'year', 'from':2008, 'to':1950, 'label':'', 'default':member.extra.year}) }}
-            </div>
-        </div>
+			{{ html.input({'type':'text','name':'mobile', 'id':'register-mobile', 'class':'mobile', 'value':input.mobile | default(member.extra.mobile), 'label':'Mobile no.', 'placeholder':'eg. 09057896348'}) }}
+			<div class='row data-set birth-date'>
+				<label class='caption'>Birthdate</label>
+				<div class='text clearfix'>
+					{{ html.select_month({'name':'month', 'label':'', 'default': member.extra.month }) }}
+					{{ html.select_number({'name':'day', 'from':1, 'to':31, 'label':'', 'default':member.extra.day}) }}
+					{{ html.select_number({'name':'year', 'from':2008, 'to':1950, 'label':'', 'default':member.extra.year}) }}
+				</div>
+			</div>
 
-        {{
-        html.radio('gender', 'Gender', [
-        {'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender },
-        {'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
-        ])
-        }}
+			{{
+			html.radio('gender', 'Gender', [
+			{'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender },
+			{'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
+			])
+			}}
 
-        {% if member %}
-            {% set submit_text = "Update" %}
-        {% else %}
-            {% set submit_text = "Register" %}
-        {% endif %}
+			{% if member %}
+				{% set submit_text = "Update" %}
+			{% else %}
+				{% set submit_text = "Register" %}
+			{% endif %}
 
-        <div class='buttons clearfix'>
-            <input type="submit" role="button" value="{{ submit_text }}">
-            <a class='cancel' href="/" role="button">Cancel</a>
-        </div>
-    </fieldset>
-</form>
+			<div class='buttons clearfix'>
+				<input type="submit" role="button" value="{{ submit_text }}">
+				<a class='cancel' href="/" role="button">Cancel</a>
+			</div>
+		</fieldset>
+	</form>
+{% endif %}
