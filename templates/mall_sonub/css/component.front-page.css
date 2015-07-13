@@ -237,9 +237,9 @@ img.fake{
     margin:0 auto 10px auto;
 }
 
-.todays-pick .title{
+.todays-pick > .title{
     /*padding:0 10px;*/
-    margin-bottom:15px;
+    margin-bottom:10px;
     font-size:1.5em;
     font-weight:bold;
     line-height:100%;
@@ -291,6 +291,15 @@ img.fake{
     width:50%;
 }
 
+.todays-pick section.grid.top .a .item{
+    border:1px solid #ddd;
+	border-radius:3px;
+}
+
+.todays-pick section.grid.top .a .item .photo{
+    border:0;
+}
+
 .todays-pick section.grid.top .b .item{
     float:left;
     width:50%;
@@ -301,7 +310,7 @@ img.fake{
 }
 
 .todays-pick section.grid .item  .info .price{
-    font-size:1.2em;
+    font-size:1.4em;
 }
 
 .todays-pick section.grid .item  .info .price.constant{
@@ -321,7 +330,7 @@ img.fake{
     position:absolute;
     left:0;
     bottom:0;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 
 .todays-pick section.grid .b a:first-child .item .inner{
@@ -352,7 +361,7 @@ img.fake{
 .todays-pick .item .info-wrapper{
     position: absolute;
     left: -83px;
-    bottom: -170px;
+    bottom: -167px;
     height: 264px;
     width: 264px;
     background-color: #ffffff;
@@ -372,18 +381,19 @@ img.fake{
 }
 
 .todays-pick .item .info.circle-type > div{
-    margin:10px 0 0 90px;
+    margin:0 0 0 100px;
     color:#ffffff;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 
 .todays-pick .item .info.circle-type > .title{
-    margin:15px 0 0 90px;    
+    /*margin:15px 0 0 90px;    */
 }
 
 .todays-pick section.grid .item .info.circle-type > .title{
-    height: 34px;
+    height: 17px;
     width: 110px;
+	margin:32px 0 5px 100px;
     font-size:1.1em;
     line-height: 120%;
     overflow: hidden;
@@ -409,8 +419,12 @@ img.fake{
     box-sizing:border-box;
 }
 
+.todays-pick .item .info.arrow-type-info-1 > .title{
+    margin-bottom:10px;
+}
+
 .todays-pick .item .info.arrow-type-info-1 > .price{
-    padding:4px 10px;
+    padding:3px 10px 2px 10px;
 }
 
 .todays-pick .item .info.arrow-type-info-1 .arrow-right{
@@ -427,7 +441,7 @@ img.fake{
 
 .todays-pick .item .info.arrow-type-info-1 .title > span.text{
     display:inline-block;
-    height:15px;
+    height:17px;
     max-width:120px;
     color:#ffffff;
     overflow:hidden;
