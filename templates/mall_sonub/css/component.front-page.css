@@ -231,18 +231,34 @@ img.fake{
 /*eo top-items*/
 
 
+/*.title.new-design*/
+.title.new-design{
+    /*padding:0 10px;*/
+    margin-bottom:10px;
+    font-size:1.2em;	
+    font-weight:bold;
+	color:#fff;
+    line-height:100%;
+	background:url("/themes/withcenter/templates/mall_sonub/img/front-page-label-line.png");
+	background-repeat:repeat-x;
+	background-position:center center;
+}
+
+.title.new-design > .inner{
+	height:31px;
+	width:186px;
+	padding:8px 0;
+	margin:auto;
+    background:url("/themes/withcenter/templates/mall_sonub/img/front-page-label-title.png");
+	text-align:center;
+	box-sizing:border-box;
+}
+/*eo .title.new-design*/
+
 /*today's pick*/
 .todays-pick{
     max-width:960px;
     margin:0 auto 10px auto;
-}
-
-.todays-pick > .title{
-    /*padding:0 10px;*/
-    margin-bottom:10px;
-    font-size:1.5em;
-    font-weight:bold;
-    line-height:100%;
 }
 
 .todays-pick  > .title > span:first-child{
