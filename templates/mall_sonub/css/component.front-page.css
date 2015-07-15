@@ -256,11 +256,13 @@ img.fake{
 
 .title.new-design2{
 	position: relative;
+	height:29px;
 	padding: 5px 0 0 22px;
 	margin: 0 0 10px 10px;
 	border-bottom: 3px solid #2980b9;
 	font-size: 1.3em;
 	font-weight: bold;
+	box-sizing:border-box;
 }
 
 .title.new-design2 img{
