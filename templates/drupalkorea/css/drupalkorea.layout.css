@@ -1,3 +1,6 @@
+body, div, span, a, input {
+    font-family: "Malgun Gothic", AppleGothic, Gulim, serif;
+}
 section.layout {
     margin:0;
     padding:0;
@@ -13,9 +16,9 @@ section.layout > footer
 }
 
 section.layout > .content {
-    margin:0 .2em;
+    margin:0 1em 1em;
 }
 
-@media all and ( min-width: 780px ) {
-    section.layout > .content { margin:0 auto; }
+@media all and ( min-width: 960px ) {
+    section.layout > .content { margin:0 auto 1em; }
 }

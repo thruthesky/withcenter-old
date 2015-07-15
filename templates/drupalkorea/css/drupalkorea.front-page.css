@@ -24,6 +24,13 @@
 }
 
 
+.front-page .post-group .row a {
+    display:block;
+    margin-bottom:.5em;
+    padding-bottom:.4em;
+    border-bottom:1px solid #e8e6e6;
+}
+
 
 .front-page .grid4 > div > div {
     margin-bottom:.4em;

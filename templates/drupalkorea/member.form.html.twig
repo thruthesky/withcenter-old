@@ -39,9 +39,11 @@
 				{% set submit_text = "회원가입 등록" %}
 			{% endif %}
 			
-			<div class='buttons clearfix'>
-				<input type="submit" role="button" value="{{ submit_text }}">
-				<a class='cancel' href="/" role="button">취소</a>
-			</div>
+			<section class='grid buttons'>
+				<div class="content">
+					<div class="a"><input type="submit" role="button" value="{{ submit_text }}"></div>
+					<div class="b"><a class='cancel' href="/" role="button">취소</a></div>
+				</div>
+			</section>
     </fieldset>
 </form>
