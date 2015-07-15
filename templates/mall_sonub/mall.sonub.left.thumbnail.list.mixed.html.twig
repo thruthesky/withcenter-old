@@ -16,7 +16,7 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 	</div>
 	{% for i in items %}
 	{% set thumbnail = i.images.item_image_thumbnail[0].url_thumbnail %}
-	<a href='/post/{{ i.entity.config_id.entity.name.value  }}/{{ i.entity.id.value }}'>
+	<a href='/mall/item/view?item_id={{ i.entity.id.value }}'>
 		<div class='item clearfix' >
 			{% if thumbnail %}
 				{% set icon = 'photo.png' %}
