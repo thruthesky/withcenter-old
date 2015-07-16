@@ -122,6 +122,7 @@ img.fake{
 	margin-bottom: 3px;
 	font-size: 1.2em;
 	overflow: hidden;
+	word-break:break-word;
 }
 
 .top-items.banner .inner .item > .info .price{
