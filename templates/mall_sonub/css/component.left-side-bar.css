@@ -94,7 +94,7 @@
 .left-side-bar .thumbnail-list .item .photo > img.greater-than {
 	position:absolute;
 	left:-10px;
-	top:0;
+	top:17px;
 	width:5px;
 	font-weight:bold;
 	font-size:1em;

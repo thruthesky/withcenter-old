@@ -81,6 +81,10 @@
     border-radius: 50%;
 }
 
+.layout > header .top .item.more{
+	margin-left:10px;
+}
+
 /*nav.menu*/
 .layout > header .top nav.menu {
     background-color: #353535;

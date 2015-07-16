@@ -55,6 +55,13 @@
     height: 20px;
 }
 
+.greeting .sprite{
+	height: 18px;
+	width: 23px;
+	background-position: -332px -65px;
+}
+
+
 .search .sprite{
     background-position: -216px 0;
     width: 20px;
@@ -70,5 +77,11 @@
 .more .sprite {
    background-position: -79px -65px;
     width: 28px;
+    height: 20px;
+}
+
+.message .sprite {
+   background-position: -376px -65px;
+    width: 22px;
     height: 20px;
 }

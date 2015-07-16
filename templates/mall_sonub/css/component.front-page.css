@@ -20,10 +20,10 @@ img.fake{
 
 /*latest-list title*/
 .title.latest-list{
-	padding: 10px 0;
+	/*padding: 10px 0;
 	font-size: 1.5em;
 	font-weight:bold;
-	color: #393939;
+	color: #393939;*/
 }
 
 .title.latest-list > span:first-child{
@@ -283,6 +283,61 @@ img.fake{
 .title.new-design2 span:nth-child(2){
 	color:#7bda9e;
 }
+
+.title.new-design3{
+	position:relative;
+}
+
+.title.new-design3 .text{
+	position:relative;	
+	width:140px;	
+	padding:5px 12px;
+	margin-bottom:10px;
+	background:url("/themes/withcenter/templates/mall_sonub/img/line.png");
+	background-repeat:no-repeat;
+	background-color:#fff;
+	font-size:1.2em;
+	font-weight:bold;
+	box-sizing:border-box;
+	z-index:2;
+}
+
+.title.new-design3 .text > span:first-child{
+	color:#0075d0;
+}
+
+.title.new-design3 .text > span:last-child{
+	color:#7bda9e;
+}
+
+.title.new-design3 > .right-border{
+	position:absolute;
+	left:0;
+	top:9px;
+	width:100%;
+	border-bottom:2px solid #0075d0;
+	z-index:1;
+}
+
+
+.title.new-design4{
+	position: relative;
+	height: 26px;
+	padding: 4px 0 0 22px;
+	margin: 0 0 10px 10px;
+	border-bottom: 2px solid #0195db;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #0195db;
+	box-sizing: border-box;
+}
+
+.title.new-design4 img{
+	position: absolute;
+	left: -10px;
+	top: 7px;
+	width: 23px;	
+}
 /*eo .title.new-design*/
 
 /*today's pick*/
@@ -338,8 +393,7 @@ img.fake{
 }
 
 .todays-pick section.grid.top .a .item{
-    border:1px solid #ddd;
-	border-radius:3px;
+    border:1px solid #ddd;	
 }
 
 .todays-pick section.grid.top .a .item .photo{

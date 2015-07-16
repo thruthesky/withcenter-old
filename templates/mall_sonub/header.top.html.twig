@@ -38,16 +38,6 @@
 					</a>
 				</td>
 
-				<td class="knowledge">
-					<a href="/post/knowledge">
-						<div class="item knowledge">
-							<div class="sprite"></div>
-							<div class="text">
-                                <script>ln('Knowledge,지식인');</script>
-							</div>
-						</div>
-					</a>
-				</td>
 
 				<td class="discussion">
 					<a href="/post/discussion">
@@ -105,7 +95,29 @@
 						</div>
 					</a>
 				</td>
-
+				
+				<td class="greeting">
+					<a href="#">
+						<div class="item greeting">
+							<div class="sprite"></div>
+							<div class="text">
+                                <script>ln('Greetings,Greetings');</script>
+							</div>
+						</div>
+					</a>
+				</td>
+				{% if logged_in %}
+				<td class="message">
+					<a href="/message/list">
+						<div class="item message">
+							<div class="sprite"></div>
+							<div class="text">
+                                <script>ln('Message,Message');</script>
+							</div>
+						</div>
+					</a>
+				</td>
+				{% endif %}
 				<td class="login">
 					{% if logged_in %}
 						<a href="/member/update">
