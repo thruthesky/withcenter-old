@@ -323,7 +323,7 @@ img.fake{
 .title.new-design4{
 	position: relative;
 	height: 26px;
-	padding: 4px 0 0 22px;
+	padding: 4px 0 0 17px;
 	margin: 0 0 10px 10px;
 	border-bottom: 2px solid #0195db;
 	font-size: 1.2em;
@@ -334,7 +334,7 @@ img.fake{
 
 .title.new-design4 img{
 	position: absolute;
-	left: -10px;
+	left: -12px;
 	top: 7px;
 	width: 23px;	
 }
