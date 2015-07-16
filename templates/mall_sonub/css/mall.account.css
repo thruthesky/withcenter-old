@@ -38,7 +38,7 @@
 	padding:0;	
 }
 
-.member-form .row.data-set > .text, .member-form .row > .text{
+.member-form .row.data-set > .text, .member-form .row > .text{	
 	position:relative;	
 	padding-left:37px;
 	overflow:hidden;
@@ -217,6 +217,7 @@
 }
 
 .user-login-form.member-form .row.data-set > .text input[type='text'], .user-login-form.member-form .row.data-set > .text input[type='password']{
+	height:46px;
 	padding:16px 10px 16px 10px;
 	background-color:#fff;
 }
