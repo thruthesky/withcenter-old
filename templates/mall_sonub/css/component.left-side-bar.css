@@ -111,6 +111,7 @@
 }
 
 .left-side-bar .thumbnail-list .item .info{
+	height:45px;
 	/*float: left;
 	height: 48px;
 	width: 127px;*/
@@ -119,6 +120,6 @@
 	color: #4073a0;
 	overflow: hidden;
 	box-sizing: border-box;
-	line-height: 120%;
+	/*line-height: 120%;*/
 	word-break: break-word;
 }
