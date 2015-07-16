@@ -1,5 +1,8 @@
 body, div, a, .text {
     font-family: "Malgun Gothic", AppleGothic, serif;
+	
+	/*added for line height unity*/
+	line-height:110%;
 }
 
 .layout > section.content {

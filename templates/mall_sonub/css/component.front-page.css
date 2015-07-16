@@ -131,9 +131,9 @@ img.fake{
 }
 
 .top-items.banner .inner .item > .info .price.constant{
-	/*font-size: 1em;*/
-	color:yellow;
-	/*line-height: 140%;*/
+	padding-top: 5px;
+	font-size: 1.1em;
+	color: yellow;
 }
 
 .top-items.banner .inner .item > .info .category-label{	
@@ -247,7 +247,7 @@ img.fake{
 .title.new-design > .inner{
 	height:31px;
 	width:186px;
-	padding:8px 0;
+	padding:6px 0;
 	margin:auto;
     background:url("/themes/withcenter/templates/mall_sonub/img/front-page-label-title.png");
 	text-align:center;
@@ -257,7 +257,7 @@ img.fake{
 .title.new-design2{
 	position: relative;
 	height:29px;
-	padding: 5px 0 0 22px;
+	padding: 3px 0 0 22px;
 	margin: 0 0 10px 10px;
 	border-bottom: 3px solid #2980b9;
 	font-size: 1.3em;
@@ -405,7 +405,7 @@ img.fake{
 /*circle-type*/
 .todays-pick .item .info-wrapper{
     position: absolute;
-    left: -83px;
+    left: -80px;
     bottom: -167px;
     height: 264px;
     width: 264px;

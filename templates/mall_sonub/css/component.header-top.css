@@ -150,6 +150,10 @@ header table.menu-table td.search .item form{
 	padding: 10px 0 7px 0!important;
 }
 
+.layout > header .top .item.user .text{
+	margin-top:-1px;
+}
+
 header table.menu-table td.search .item.less960 form{
 	display:none;
 	position:absolute;
