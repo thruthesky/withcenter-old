@@ -37,11 +37,11 @@
 }
 
 .layout > header .top table.menu-table td.logo {
-    width:1%;
+    width:8%;
 }
 
 .layout > header .top table.menu-table td.more {
-    width:1%;
+    width:5%;
 }
 
 .layout > header .top table.menu-table td.logo .item { margin-left:1em; }
