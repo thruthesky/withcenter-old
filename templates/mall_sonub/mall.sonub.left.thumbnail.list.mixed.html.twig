@@ -18,14 +18,8 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 	{% set thumbnail = i.images.item_image_thumbnail[0].url_thumbnail %}
 	<a href='/mall/item/view?item_id={{ i.entity.id.value }}'>
 		<div class='item clearfix' >
-			{% if thumbnail %}
-				{% set icon = 'photo.png' %}
-				<div class='photo'><img src='{{ thumbnail }}'/></div>
-			{% else %}
-				{% set icon = 'audio.png' %}
-			{% endif %}
-			<div class='info {{ language }}'>
-				<img src='/{{ dir_sub_theme }}/img/post/{{ icon }}'/>
+			<div class='photo'><img src='{{ thumbnail }}'/></div>
+			<div class='info {{ language }}'>				
 				{{ i.entity.title.value }}
 			</div>
 		</div>

@@ -12,9 +12,18 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 	</div>
 	{% for p in posts %}
 	<a href='/post/{{ p.entity.config_id.entity.name.value  }}/{{ p.entity.id.value }}'>
-		<div class='item clearfix' >
-			<div class='photo'><img class='greater-than' src='{{ url_sub_theme }}/img/left/blue_greater_than.png'/><img src='{{ p.first_image_thumbnail.url_thumbnail }}'/></div>
-			<div class='info {{ language }}'>{{ p.entity.title.value }}</div>
+		<div class='item clearfix' >						
+			{% if p.first_image_thumbnail.url_thumbnail %}
+				{% set icon = 'photo.png' %}
+				<div class='photo'><img class='greater-than' src='{{ url_sub_theme }}/img/left/blue_greater_than.png'/><img src='{{ p.first_image_thumbnail.url_thumbnail }}'/></div>
+			{% else %}
+				{% set icon = 'audio.png' %}
+			{% endif %}
+			
+			<div class='info {{ language }}'>				
+				<img src='/{{ dir_sub_theme }}/img/post/{{ icon }}'/>
+				{{ p.entity.title.value }}
+			</div>
 		</div>
 	</a>
 	{% endfor %}
