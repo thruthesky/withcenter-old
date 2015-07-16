@@ -118,10 +118,10 @@ img.fake{
 }
 
 .top-items.banner .inner .item > .info .title{
-	height:17px;
-	margin-bottom:5px;
-	font-size:1.2em;
-	overflow:hidden;
+	height: 19px;
+	margin-bottom: 3px;
+	font-size: 1.2em;
+	overflow: hidden;
 }
 
 .top-items.banner .inner .item > .info .price{
