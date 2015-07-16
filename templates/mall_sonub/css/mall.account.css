@@ -116,6 +116,7 @@
 }
 
 .member-form .row.data-set > .text input[type='text'],.member-form .row.data-set > .text input[type='password'],.member-form .row.data-set > .text input[type='email']{	
+	height:36px;
 	width:100%;
 	border:0;
 	padding:10px 10px 10px 5px;
@@ -283,7 +284,7 @@
 	}
 
 	.member-form .buttons input[type='submit'], .member-form .buttons a{			
-		width:160px;
+		width:159px;
 	}
 	
 	.user-login-form.member-form .buttons input[type='submit'], .user-login-form.member-form.member-form .buttons a{		
