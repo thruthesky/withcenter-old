@@ -21,11 +21,11 @@
 				<a href='/mall/item/view?item_id={{ item.id.value }}'>
 					<div class='item fake clearfix'>						
 						<div class='photo'>
-						<img class='fake 'src='/{{ dir_sub_theme }}/img/mall_top_fake.png'/>
+						<img class='fake 'src='{{ url_sub_theme }}/img/mall_top_fake.png'/>
 						{% if images.item_image_thumbnail[0] %}
 							{% set url_thumb = images.item_image_thumbnail[0].url_large %}
 						{% else %}
-							{% set url_thumb = '/{{ dir_sub_theme }}/img/mall-no-image.png' %}
+							{% set url_thumb = '{{ url_sub_theme }}/img/mall-no-image.png' %}
 						{% endif %}
 							<img src='{{ url_thumb }}'/>												
 						</div>
@@ -35,9 +35,9 @@
 							<div class='category-label'>
 								{#
 								old
-								<img src='/{{ dir_sub_theme }}/img/left/{{ items[i].category_root.name.value | lower }}.png'/>
+								<img src='{{ url_sub_theme }}/img/left/{{ items[i].category_root.name.value | lower }}.png'/>
 								#}
-								<img src='/{{ dir_sub_theme }}/img/left//{{ dir_sub_theme }}/img/left/{{ f.get( 0,items[i].category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
+								<img src='{{ url_sub_theme }}/img/left/{{ f.get( 0,items[i].category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
 							</div>
 						</div>						
 					</div>
@@ -57,11 +57,11 @@
 			<a href='/mall/item/view?item_id={{ item.id.value }}' {{ loop.index }} {{ ( items|length ) }}>
 				<div class='item clearfix' page='{{ loop.index }}'>					
 					<div class='photo'>
-					<img class='fake 'src='/{{ dir_sub_theme }}/img/mall_top_fake.png'/>
+					<img class='fake 'src='{{ url_sub_theme }}/img/mall_top_fake.png'/>
 					{% if images.item_image_thumbnail[0] %}
 						{% set url_thumb = images.item_image_thumbnail[0].url_large %}
 					{% else %}
-						{% set url_thumb = '/{{ dir_sub_theme }}/img/mall-no-image.png' %}
+						{% set url_thumb = '{{ url_sub_theme }}/img/mall-no-image.png' %}
 					{% endif %}
 						<img src='{{ url_thumb }}'/>												
 					</div>
@@ -71,9 +71,9 @@
 						<div class='category-label'>
 							{#
 							old
-							<img src='/{{ dir_sub_theme }}/img/left/{{ i.category_root.name.value | lower }}.png'/>
+							<img src='{{ url_sub_theme }}/img/left/{{ i.category_root.name.value | lower }}.png'/>
 							#}
-							<img src='/{{ dir_sub_theme }}/img/left/{{ f.get( 0,i.category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
+							<img src='{{ url_sub_theme }}/img/left/{{ f.get( 0,i.category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
 						</div>
 					</div>						
 				</div>
@@ -95,11 +95,11 @@
 				<a href='/mall/item/view?item_id={{ item.id.value }}'>
 					<div class='item fake clearfix'>						
 						<div class='photo'>
-						<img class='fake 'src='/{{ dir_sub_theme }}/img/mall_top_fake.png'/>
+						<img class='fake 'src='{{ url_sub_theme }}/img/mall_top_fake.png'/>
 						{% if images.item_image_thumbnail[0] %}
 							{% set url_thumb = images.item_image_thumbnail[0].url_large %}
 						{% else %}
-							{% set url_thumb = '/{{ dir_sub_theme }}/img/mall-no-image.png' %}
+							{% set url_thumb = '{{ url_sub_theme }}/img/mall-no-image.png' %}
 						{% endif %}
 							<img src='{{ url_thumb }}'/>												
 						</div>
@@ -107,7 +107,7 @@
 							<div class='title'>{{ item.title.value }}</div>
 							<div class='price {{ price_type }}'>{{ price }}</div>
 							<div class='category-label'>
-								<img src='/{{ dir_sub_theme }}/img/left/{{ f.get( 0,items[i].category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
+								<img src='{{ url_sub_theme }}/img/left/{{ f.get( 0,items[i].category_root.name.value ) | trim | lower | replace( {"&amp;":"&"} ) }}.png'/>
 							</div>
 						</div>						
 					</div>
@@ -117,7 +117,7 @@
 		{% endif %}
 		
 		<img class='fake 'src='/themes/withcenter/templates/mall_sonub/img/top_fake.png'/>
-		<div class='arrow left'><img src='/{{ dir_sub_theme }}/img/top_arrow_left.png'/></div>
-		<div class='arrow right'><img src='/{{ dir_sub_theme }}/img/top_arrow_right.png'/></div>
+		<div class='arrow left'><img src='{{ url_sub_theme }}/img/top_arrow_left.png'/></div>
+		<div class='arrow right'><img src='{{ url_sub_theme }}/img/top_arrow_right.png'/></div>
 	</div>
 </div>
