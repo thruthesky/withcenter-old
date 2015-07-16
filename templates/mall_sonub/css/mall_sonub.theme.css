@@ -5,6 +5,10 @@ body, div, a, .text {
 	line-height:110%;
 }
 
+input{
+	line-height:100%;
+}
+
 .layout > section.content {
     margin:0 6px;
 }
