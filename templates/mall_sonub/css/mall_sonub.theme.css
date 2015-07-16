@@ -5,7 +5,7 @@ body, div, a, .text {
 	line-height:110%;
 }
 
-input{
+input, select, text-area{
 	line-height:100%;
 }
 
