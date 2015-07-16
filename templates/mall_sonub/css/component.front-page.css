@@ -351,9 +351,9 @@ img.fake{
     width:50%;
 }
 
-.todays-pick section.grid .item  .info .title{
+.todays-pick section.grid .item .info .title{
     font-size:1.1em;
-	margin-bottom:3px;
+	margin-bottom:5px;
 	word-break:break-word;
 }
 
