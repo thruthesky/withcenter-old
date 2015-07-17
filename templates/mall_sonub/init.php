@@ -48,23 +48,25 @@ if( $hook == 'page' ) {
 									]);		
 	
 	$pwt = [];
-	foreach( $post_with_thumbnail as $post ){		
-		$file_entity = $post->fid_of_first_image->entity;
-		/*
-		*I need thumbnails...
-		*/
-		if( $file_entity ){
-			$file_url = [];
-			$file_url['fid'] = $file_entity->id();
-			$file_url['url_original'] = $file_entity->url();
-			$path = $file_entity->getFileUri();
-			$file_url['url_thumbnail'] = entity_load('image_style', 'thumbnail')->buildUrl($path);
-			$file_url['url_medium'] = entity_load('image_style', 'medium')->buildUrl($path);
-			$file_url['url_large'] = entity_load('image_style', 'large')->buildUrl($path);
-			
-			$pwt[ $post->id() ]['first_image_thumbnail'] = $file_url;
+	if ( $post_with_thumbnail ) {
+		foreach( $post_with_thumbnail as $post ){
+			$file_entity = $post->fid_of_first_image->entity;
+			/*
+            *I need thumbnails...
+            */
+			if( $file_entity ){
+				$file_url = [];
+				$file_url['fid'] = $file_entity->id();
+				$file_url['url_original'] = $file_entity->url();
+				$path = $file_entity->getFileUri();
+				$file_url['url_thumbnail'] = entity_load('image_style', 'thumbnail')->buildUrl($path);
+				$file_url['url_medium'] = entity_load('image_style', 'medium')->buildUrl($path);
+				$file_url['url_large'] = entity_load('image_style', 'large')->buildUrl($path);
+
+				$pwt[ $post->id() ]['first_image_thumbnail'] = $file_url;
+			}
+			$pwt[ $post->id() ]['entity'] = $post;
 		}
-			$pwt[ $post->id() ]['entity'] = $post;		
 	}
 	$variables['data']['sidebar_post_thumbnail'] = $pwt;
 }

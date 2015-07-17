@@ -322,8 +322,7 @@
 }
 
 /** Buttons */
-
-.user-login-form.member-form .buttons{
+.user-login-form.member-form .buttons {
     width:100%;
     text-align:center;
 }
@@ -349,3 +348,4 @@
         box-sizing: border-box;
     }
 }
+/** EO Buttons */

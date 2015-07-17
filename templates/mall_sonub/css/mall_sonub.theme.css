@@ -1,11 +1,9 @@
 body, div, a, .text {
     font-family: "Malgun Gothic", AppleGothic, serif;
-	
-	/*added for line height unity*/
-	line-height:110%;
+    line-height: 110%;
 }
 
-input, select, text-area{
+input, select, textarea{
 	line-height:100%;
 }
 
