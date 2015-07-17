@@ -55,14 +55,11 @@ header .logo-and-search .advance-search{
 	height:43px;
 	width:136px;
 	padding:14px 15px;
-	background-color:#2798d8;	
+	background-color:#2798d8;
 	border-top-right-radius:2px;
 	border-bottom-right-radius:2px;
-	box-sizing:border-box;
-}
-
-header .logo-and-search .advance-search a{
 	color:#fff;
+	box-sizing:border-box;
 }
 
 
