@@ -29,7 +29,7 @@ $(function(){
         var m = "<div class='member-profile-box'>";
         m += "<div class='row'><span class='caption'><a href='/message/send?receiver="+name+"'>"+name+"</a></span></div>";
         m += "<div class='row'><span class='caption'><a href='/message/send?receiver="+name+"'>Send Message</a></span></div>";
-        m += "<div class='row'><span class='caption'><a href='/post/search?qn=y&q=canary="+name+"'>Search Posts</a></span></div>";
+        m += "<div class='row'><span class='caption'><a href='/post/search?qn=y&q="+name+"'>Search Posts</a></span></div>";
         m += "<div class='row'><span class='caption'><a href='/member/view/"+name+"'>View Profile</a></span></div>";
         m += "</div>";
         return m;
