@@ -154,6 +154,21 @@ header table.menu-table td.search .item form{
 	padding: 10px 0 7px 0!important;
 }
 
+.layout > header .top .item.message{
+	position:relative;
+}
+
+.layout > header .top .item.message .unread_messages{
+	position:absolute;
+	right:15%;
+	top:15%;	
+	padding:0 3px 2px 3px;
+	border-radius:100%;
+	background-color:red;	
+	font-size:.65em;
+	color:#fff;
+}
+
 .layout > header .top .item.user .text{
 	margin-top:-1px;
 }
