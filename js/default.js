@@ -22,7 +22,7 @@ $(function(){
         $(selector_member_profile_box).remove();		
 		
         $body.append(markup);
-        var h_member_profile = $('.member-profile').outerHeight() + 5;
+        var h_member_profile = $('.member-profile').outerHeight() + 15;
 
 		//alert( $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"'").length );
         var position = $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"']").position();
