@@ -111,9 +111,11 @@
 					<a href="/message/list">
 						<div class="item message">
 							<div class="sprite">
-								<div class='unread_messages'>
-									{{ data.user_unread_messages }}
-								</div>
+								{% if data.user_unread_messages %}
+									<div class='unread_messages'>
+										{{ data.user_unread_messages }}
+									</div>
+								{% endif %}
 							</div>
 							<div class="text">
                                 <script>ln('Message,Message');</script>
