@@ -19,13 +19,16 @@ $(function(){
         var uid = $(this).attr('uid');
         var target_id = $(this).attr('target_id');
         var markup = get_member_profile_box(uid, name);
-        $(selector_member_profile_box).remove();
+        $(selector_member_profile_box).remove();		
+		
         $body.append(markup);
-        var h_member_profile = $('.member-profile').outerHeight() + 4;
-        console.log("h:"+h_member_profile);
-        var position = $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"'").position();
+        var h_member_profile = $('.member-profile').outerHeight() + 0;
+
+		//alert( $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"'").length );
+        var position = $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"']").position();
         var top = position.top + h_member_profile;
         var left = position.left + 30;
+		
         $(selector_member_profile_box).css({
             'position': 'absolute',
             'top': top + 'px',
