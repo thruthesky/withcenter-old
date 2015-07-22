@@ -598,7 +598,7 @@ img.fake{
 	
 	/*top items arrow*/
 	.top-items.banner .inner > .arrow{
-		top:35%;
+		top:30%;
 		height: 75px;
 		width: 35px;		
 	}
@@ -612,6 +612,10 @@ img.fake{
 }
 
 @media all and ( min-width: 640px ) {
+	.top-items.banner .inner > .arrow{
+		top:35%;
+	}
+
     .top-items.banner .inner .item > .info{
         display:block;
     }
