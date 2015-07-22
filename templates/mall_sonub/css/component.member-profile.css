@@ -1,0 +1,45 @@
+.member-profile-box{
+	position:relative;
+	padding:10px;
+	border:1px solid #afafaf;
+	background-color:#fff;
+}
+
+.member-profile-box .triangle{
+	position:absolute;
+	top:-5px;
+	left:5px;
+	border-bottom:5px solid #afafaf;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+}
+
+.member-profile-box .row{
+	display:inline-block;
+}
+
+.member-profile-box .row .caption > a{
+	display: inline-block;
+	padding: 4px 10px 6px 10px;
+	margin-right: 5px;
+	border-radius:2px;
+	background-color: #1886c5;
+	color:#fff;
+}
+
+.member-profile-box .row.user{
+	display:block;
+	margin-bottom:10px;
+}
+
+.member-profile-box .row.user .caption > a{	
+	padding:0;
+	margin:0;
+	font-weight:bold;
+	color:blue;	
+	background-color:transparent;
+}
+
+.member-profile-box .row.view-profile .caption > a{	
+	margin-right:0;
+}

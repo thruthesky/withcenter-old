@@ -22,19 +22,19 @@ $(function(){
         $(selector_member_profile_box).remove();		
 		
         $body.append(markup);
-        var h_member_profile = $('.member-profile').outerHeight() + 0;
+        var h_member_profile = $('.member-profile').outerHeight() + 5;
 
 		//alert( $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"'").length );
         var position = $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"']").position();
         var top = position.top + h_member_profile;
-        var left = position.left + 30;
+        var left = position.left + 20;
 		
         $(selector_member_profile_box).css({
             'position': 'absolute',
             'top': top + 'px',
             'left': left + 'px',
-            'padding': '1em',
-            'background-color': '#f2f2f2'
+            //'padding': '1em',
+            //'background-color': '#f2f2f2'
         });
 
         console.log(e);
@@ -54,10 +54,11 @@ $(function(){
 	
     function get_member_profile_box(uid, name) {
         var m = "<div class='member-profile-box'>";
-        m += "<div class='row'><span class='caption'><a href='/message/send?receiver="+name+"'>"+name+"</a></span></div>";
-        m += "<div class='row'><span class='caption'><a href='/message/send?receiver="+name+"'>Send Message</a></span></div>";
-        m += "<div class='row'><span class='caption'><a href='/post/search?qn=y&q="+name+"'>Search Posts</a></span></div>";
-        m += "<div class='row'><span class='caption'><a href='/member/view/"+name+"'>View Profile</a></span></div>";
+		m += "<div class='triangle'></div>";
+        m += "<div class='row user'><span class='caption'><a href='/message/send?receiver="+name+"'>"+name+"</a></span></div>";
+        m += "<div class='row message'><span class='caption'><a href='/message/send?receiver="+name+"'>Send Message</a></span></div>";
+        m += "<div class='row post'><span class='caption'><a href='/post/search?qn=y&q="+name+"'>Search Posts</a></span></div>";
+        m += "<div class='row view-profile'><span class='caption'><a href='/member/view/"+name+"'>View Profile</a></span></div>";
         m += "</div>";
         return m;
     }

@@ -25,6 +25,7 @@ mall_sonub:
       templates/mall_sonub/css/mall_sonub.theme.css: {}
       templates/mall_sonub/css/sprite.css: {}
       templates/mall_sonub/css/component.left-side-bar.css: {}
+      templates/mall_sonub/css/component.member-profile.css: {}
   js:
     templates/mall_sonub/js/mall_philgo.js: {}
 
