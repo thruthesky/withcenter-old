@@ -28,6 +28,10 @@
     margin-bottom:3px;
 }
 
+.layout > header .top .item.message .sprite{
+    position:relative;
+}
+
 .layout > header .top table.menu-table a {
     color:white;
 }
@@ -127,7 +131,8 @@
 header table.menu-table td.market,
 header table.menu-table td.news,
 header table.menu-table td.music,
-header table.menu-table td.knowledge {
+header table.menu-table td.knowledge,
+header table.menu-table td.discussion {
     display:none;
 }
 
@@ -160,8 +165,8 @@ header table.menu-table td.search .item form{
 
 .layout > header .top .item.message .unread_messages{
 	position: absolute;
-	left: 57%;
-	top: 16%;
+	left: 90%;
+	top: -10%;
 	padding: 1px 3px 3px 3px;
 	border-radius: 100%;
 	/* background-color: #fff; */
@@ -266,7 +271,8 @@ header table.menu-table td.search .item.more960{
 @media all and ( min-width: 640px ) { /* 640px and above */
 	header table.menu-table td.music,
 	header table.menu-table td.market,
-	header table.menu-table td.knowledge {
+	header table.menu-table td.knowledge,
+	header table.menu-table td.discussion {
 		display:table-cell;
 	}
 }

@@ -110,15 +110,14 @@
 				<td class="message">
 					<a href="/message/list">
 						<div class="item message">
-							<div class="sprite"></div>
+							<div class="sprite">
+								<div class='unread_messages'>
+									{{ data.user_unread_messages }}
+								</div>
+							</div>
 							<div class="text">
                                 <script>ln('Message,Message');</script>
 							</div>
-							
-							<div class='unread_messages'>
-								{{ data.user_unread_messages }}
-							</div>
-							
 						</div>
 					</a>
 				</td>
