@@ -159,14 +159,17 @@ header table.menu-table td.search .item form{
 }
 
 .layout > header .top .item.message .unread_messages{
-	position:absolute;
-	right:15%;
-	top:15%;	
-	padding:0 3px 2px 3px;
-	border-radius:100%;
-	background-color:red;	
-	font-size:.65em;
-	color:#fff;
+	position: absolute;
+	left: 57%;
+	top: 16%;
+	padding: 1px 3px 3px 3px;
+	border-radius: 100%;
+	/* background-color: #fff; */
+	font-size: .8em;
+	font-weight: bold;
+	color: #fff;
+	font-family: arial;
+	color: red;
 }
 
 .layout > header .top .item.user .text{
