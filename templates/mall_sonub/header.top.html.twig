@@ -169,7 +169,7 @@
 			<li>
 				{% if logged_in %}
 					<a href="/member/view/{{ data.member.name.value }}"><script>ln('My Page,개인정보');</script></a>
-					<a href="/member/update"><script>ln('My Profile,My Profile');</script></a>
+					<a href="/member/update"><script>ln('My Account,My Account');</script></a>
 				{% else %}
 					<a href='/member/login' class="login"><script>ln('Sign in,로그인');</script></a>
 				{% endif %}
