@@ -18,13 +18,7 @@ $(function(){
 		var uid = $(this).attr('uid');
         var target_id = $(this).attr('target_id');
 		
-		/*if( $(".member-profile-box[uid='"+uid+"'][target_id='"+target_id+"']").length ){
-		
-		}
-		else{*/
-		$(selector_member_profile_box).remove();
-		//}
-		
+		$(".member-profile-box:not([uid='"+ uid +"'][target_id='"+ target_id +"'])").remove();
 		
 		var url = "/library/api?call=getMemberProfile&uid=" + uid + "&target_id=" + target_id;
 		ajax_api(url, callback_show_member_profile);
@@ -70,6 +64,8 @@ $(function(){
             'top': top + 'px',
             'left': left + 'px',
         });
+
+		$(".member-profile-box:not([uid='"+ re.uid +"'][target_id='"+ re.target_id +"'])").remove();
 	}
 	
 	function on_member_profile_leave(){	
