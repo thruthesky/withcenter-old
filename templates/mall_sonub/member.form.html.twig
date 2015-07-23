@@ -12,14 +12,18 @@
 					<div class="text">
 						<div class='primary-photo clearfix'>
 							<div class='photo'>
-								<input type='file' name='profile_photo' onchange='jQuery(this).parent().parent().submit();'>
+								<input type='file' name='profile_photo' accept="image/*" onchange='jQuery(this).parent().parent().submit();'>
 								{% if member.photo %}
 									{% set url = member.photo.thumbnails['url_medium'] %}
 								{% else %}
 									{% set url = "/modules/mall/img/fake_upload_photo.png" %}
 									{% set class = ' class=fake' %}
 								{% endif %}
-							<img{{ class }} src='{{ url}}'/>
+								<img{{ class }} src='{{ url}}'/>
+								<span class='ajax-file-upload-progress-bar'>
+									<span class='bar'></span>
+									<span class='percent caption'></span>
+								</span>
 							</div>
 						</div>
 					</div>
