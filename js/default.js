@@ -65,7 +65,7 @@ $(function(){
             'left': left + 'px',
         });
 
-		$(".member-profile-box:not([uid='"+ re.uid +"'][target_id='"+ re.target_id +"'])").remove();
+		//$(".member-profile-box:not([uid='"+ re.uid +"'][target_id='"+ re.target_id +"'])").remove();
 	}
 	
 	function on_member_profile_leave(){	
