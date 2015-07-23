@@ -52,6 +52,8 @@ $(function(){
     }
 	
 	function callback_show_member_profile( re ){
+		$(".member-profile-box:not([uid='"+ re.uid +"'][target_id='"+ re.target_id +"'])").remove();
+	
 		$body.append( re.markup );
 		var h_member_profile = $('.member-profile').outerHeight() + 15;
 		var position = $(".member-profile[uid='"+re.uid+"'][target_id='"+re.target_id+"']").position();
@@ -63,9 +65,7 @@ $(function(){
             'position': 'absolute',
             'top': top + 'px',
             'left': left + 'px',
-        });
-
-		//$(".member-profile-box:not([uid='"+ re.uid +"'][target_id='"+ re.target_id +"'])").remove();
+        });		
 	}
 	
 	function on_member_profile_leave(){	
