@@ -18,12 +18,12 @@ $(function(){
 		var uid = $(this).attr('uid');
         var target_id = $(this).attr('target_id');
 		
-		if( $(".member-profile-box[uid='"+uid+"'][target_id='"+target_id+"']").length ){
+		/*if( $(".member-profile-box[uid='"+uid+"'][target_id='"+target_id+"']").length ){
 		
 		}
-		else{
-			$(selector_member_profile_box).remove();
-		}
+		else{*/
+		$(selector_member_profile_box).remove();
+		//}
 		
 		
 		var url = "/library/api?call=getMemberProfile&uid=" + uid + "&target_id=" + target_id;
