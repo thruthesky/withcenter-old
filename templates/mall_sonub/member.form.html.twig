@@ -5,8 +5,26 @@
 	<form class='member-register-form member-form' method="post">
 		<fieldset>
 			<input type="hidden" name="mode" value="submit">
-			{% if member %}
-				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}
+			<input type="hidden" name="fid" value="">			
+			{% if member %}				
+				<div class="row primary-photo">
+					<label for="" class="caption">Primary Photo</label>
+					<div class="text">
+						<div class='primary-photo clearfix'>
+							<div class='photo'>
+								<input type='file' name='profile_photo' onchange='jQuery(this).parent().parent().submit();'>
+								{% if member.photo %}
+									{% set url = member.photo.thumbnails['url_medium'] %}
+								{% else %}
+									{% set url = "/modules/mall/img/fake_upload_photo.png" %}
+									{% set class = ' class=fake' %}
+								{% endif %}
+							<img{{ class }} src='{{ url}}'/>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}			
 			{% else %}
 				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value': input.username  , 'label':'User ID', 'placeholder':'User ID'}) }}
 				{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}

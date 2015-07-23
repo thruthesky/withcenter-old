@@ -126,14 +126,15 @@
 				{% endif %}
 				<td class="login">
 					{% if logged_in %}
-						<a href="/member/update">
+						<a href="/member/view/{{ data.member.name.value }}">
 							<div class="item user page">
 								<div class="sprite">
-									{#{% if user_photo_src %}
-										<img src="{{ user_photo_src }}">
+									{# data.member.photo.thumbnails['url_medium'] #}
+									{% if data.member.photo %}
+										<img src="{{ data.member.photo.thumbnails['url_medium'] }}">
 									{% else %}
-										<img src="/{{ dir_sub_theme }}/img/primary-photo.png">
-									{% endif %}#}
+										
+									{% endif %}
 								</div>
 								<div class="text">
                                     <script>ln('My Page,개인정보');</script>
@@ -167,7 +168,8 @@
 		<ul>
 			<li>
 				{% if logged_in %}
-					<a href="/member/update"><script>ln('My Page,개인정보');</script></a>
+					<a href="/member/view/{{ data.member.name.value }}"><script>ln('My Page,개인정보');</script></a>
+					<a href="/member/update"><script>ln('My Profile,My Profile');</script></a>
 				{% else %}
 					<a href='/member/login' class="login"><script>ln('Sign in,로그인');</script></a>
 				{% endif %}

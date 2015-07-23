@@ -21,6 +21,7 @@ $(function(){
 
 	$("body").on( "keyup",".member-form .row.data-set > .text input[name='confirm_password']", callback_confirm_password );
 	$("body").on( "keyup",".member-form .row.data-set > .text input[name='password']", callback_confirm_password );
+
 });
 
 function callback_confirm_password(){

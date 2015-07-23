@@ -1,6 +1,7 @@
 <?php
 use Drupal\post\Entity\PostData;
 use Drupal\mall\Entity\Item;
+use Drupal\library\Entity\Category;
 
 $variables['module']['mall'] = true;
 
@@ -70,3 +71,15 @@ if( $hook == 'page' ) {
 	}
 	$variables['data']['sidebar_post_thumbnail'] = $pwt;
 }
+
+
+
+
+
+/*if $hook*/
+//to avoid multiple calls
+if ($hook == 'page') {
+	//on page, we will should be able to access the categories for the menu bar
+	$variables['data']['category_entity_list'] = Category::loadAllCategories();
+}
+/*eo if $hook*/
