@@ -167,14 +167,13 @@ header table.menu-table td.search .item form{
 	position: absolute;
 	left: 90%;
 	top: -10%;
-	padding: 1px 3px 3px 3px;
-	border-radius: 100%;
-	/* background-color: #fff; */
-	font-size: .8em;
+	padding: 2px 3px 2px 3px;
+	border-radius: 2px;
+	background-color: red;
+	font-size: .7em;
 	font-weight: bold;
-	color: #fff;
 	font-family: arial;
-	color: red;
+	color: #fff;
 }
 
 .layout > header .top .item.user .text{
