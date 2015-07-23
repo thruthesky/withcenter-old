@@ -7,7 +7,9 @@
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% include dir_sub_theme ~ '/head.html.twig' %}
+    {% if sub_theme %}
+        {% include dir_sub_theme ~ '/head.html.twig' %}
+    {% endif %}
     <title>{{ head_title|safe_join(' | ') }}</title>
     {{ styles }}
     {{ scripts }}
