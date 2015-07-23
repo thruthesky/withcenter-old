@@ -37,16 +37,16 @@ if( $hook == 'page' ) {
 	}
 	$variables['data']['sidebar_post_thumbnail_mixed'] = $pwt;
 		*/
-	
+
 	$variables['data']['sidebar_post_thumbnail_mixed'] = Item::getItemsWithImages( ['limit'=>'5','by'=>'created','order'=>'DESC' ] );
-	
+
 	$post_with_thumbnail = PostData::search([
 										'fid_of_first_image' => true,
 										'order_field' => 'created',
 										'order_direction' => 'DESC',
 										'limit'=>'5'
-									]);		
-	
+									]);
+
 	$pwt = [];
 	if ( $post_with_thumbnail ) {
 		foreach( $post_with_thumbnail as $post ){
