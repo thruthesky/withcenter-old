@@ -2,26 +2,40 @@
 	position:relative;
 	padding:10px;
 	border:1px solid #afafaf;
+	border-radius:2px;
 	background-color:#fff;
 }
 
 .member-profile-box .triangle{
 	position:absolute;
-	top:-5px;
-	left:5px;
-	border-bottom:5px solid #afafaf;
-	border-left:5px solid transparent;
-	border-right:5px solid transparent;
+	top:-8px;
+	left:15px;
+	border-bottom:7px solid #afafaf;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
 }
 
-.member-profile-box .row{
-	display:inline-block;
+.member-profile-box .triangle.two{
+	position:absolute;
+	top:-7px;
+	left:15px;
+	border-bottom:7px solid #fff;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+}
+
+.member-profile-box img{
+	display:block;
+	width:100%;	
+}
+
+.member-profile-box .row{	
+	display:inline-block;	
 }
 
 .member-profile-box .row .caption > a{
 	display: inline-block;
-	padding: 4px 10px 6px 10px;
-	margin-right: 5px;
+	padding: 4px 10px 6px 10px;	
 	border-radius:2px;
 	background-color: #1886c5;
 	color:#fff;
@@ -29,7 +43,40 @@
 
 .member-profile-box .row.user{
 	display:block;
+	width:100%;
 	margin-bottom:10px;
+	white-space:nowrap;
+}
+
+.member-profile-box .row.user .photo{
+	float:left;
+	width:62px;
+	padding:2px;
+	border:1px solid #cacaca;
+	border-radius:2px;
+	box-sizing:border-box;
+}
+
+.member-profile-box .row.user .info{
+	height: 62px;
+	padding: 5px;
+	overflow: hidden;
+	box-sizing: border-box;  
+}
+
+.member-profile-box .row.user .info .name{
+	font-size:1.2em;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+.member-profile-box .row.user .info .name > span{
+	font-size:.8em;
+	font-weight:normal;	
+}
+
+.member-profile-box .row.user .info .location{
+	margin-bottom:3px;
 }
 
 .member-profile-box .row.user .caption > a{	

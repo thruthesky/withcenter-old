@@ -14,6 +14,14 @@ $(function(){
 	
     function on_member_profile(e) {
 		clearTimeout( member_profile_timeout );
+		//$(selector_member_profile_box).remove();
+		
+		var uid = $(this).attr('uid');
+        var target_id = $(this).attr('target_id');
+		var url = "/library/api?call=getMemberProfile&uid=" + uid + "&target_id=" + target_id;
+		ajax_api(url, callback_show_member_profile);
+		/*
+		clearTimeout( member_profile_timeout );
 		
         var name = $(this).text();
         var uid = $(this).attr('uid');
@@ -38,7 +46,29 @@ $(function(){
         });
 
         console.log(e);
+		*/
     }
+	
+	function callback_show_member_profile( re ){
+		console.log( re );
+		$body.append( re.markup );
+		//console.log( selector_member_profile_box );
+		var h_member_profile = $('.member-profile').outerHeight() + 15;
+		var position = $(".member-profile[uid='"+re.uid+"'][target_id='"+re.target_id+"']").position();
+        var top = position.top + h_member_profile;
+        var left = position.left + 10;
+		
+		console.log( left );
+		
+		
+		$(".member-profile-box").css({
+            'position': 'absolute',
+            'top': top + 'px',
+            'left': left + 'px',
+            //'padding': '1em',
+            //'background-color': '#f2f2f2'
+        });
+	}
 	
 	function on_member_profile_leave(){	
 		member_profile_timeout = setTimeout(function(){

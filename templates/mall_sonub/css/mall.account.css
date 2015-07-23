@@ -82,6 +82,10 @@
 	content:url("/themes/withcenter/templates/mall_sonub/img/member/confirm_password.png");
 }
 
+.member-form .row.data-set.location > .text:before{	
+	content:url("/themes/withcenter/templates/mall_sonub/img/member/location.png");
+}
+
 
 .member-form .row.data-set.terms > .text{
 	padding-left:0;

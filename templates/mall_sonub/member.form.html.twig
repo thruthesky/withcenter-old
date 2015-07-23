@@ -39,6 +39,9 @@
 			{{ html.input({'type':'email','name':'mail', 'id':'register-email', 'class':'email', 'value':input.mail | default(member.mail.value), 'label':'Email', 'placeholder':'Email'}) }}
 
 			{{ html.input({'type':'text','name':'mobile', 'id':'register-mobile', 'class':'mobile', 'value':input.mobile | default(member.extra.mobile), 'label':'Mobile no.', 'placeholder':'eg. 09057896348'}) }}
+			
+			{{ html.input({'type':'text','name':'location', 'id':'register-location', 'class':'location', 'value':input.location | default(member.extra.location), 'label':'Location', 'placeholder':'Location'}) }}
+			
 			<div class='row data-set birth-date'>
 				<label class='caption'>Birthdate</label>
 				<div class='text clearfix'>
