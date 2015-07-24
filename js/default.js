@@ -2,6 +2,7 @@ var $ = jQuery;
 var selector_member_profile_box = '.member-profile-box';
 
 var member_profile_timeout;
+var member_profile_timeout_in;
 $(function(){
     var $body = $('body');
     $body.on('mouseenter', '.member-profile', on_member_profile);
@@ -17,38 +18,12 @@ $(function(){
 		
 		var uid = $(this).attr('uid');
         var target_id = $(this).attr('target_id');
-		
-		$(".member-profile-box:not([uid='"+ uid +"'][target_id='"+ target_id +"'])").remove();
-		
-		var url = "/library/api?call=getMemberProfile&uid=" + uid + "&target_id=" + target_id;
-		ajax_api(url, callback_show_member_profile);
-		/*
-		clearTimeout( member_profile_timeout );
-		
-        var name = $(this).text();
-        var uid = $(this).attr('uid');
-        var target_id = $(this).attr('target_id');
-        var markup = get_member_profile_box(uid, name);
-        $(selector_member_profile_box).remove();		
-		
-        $body.append(markup);
-        var h_member_profile = $('.member-profile').outerHeight() + 15;
-
-		//alert( $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"'").length );
-        var position = $(".member-profile[uid='"+uid+"'][target_id='"+target_id+"']").position();
-        var top = position.top + h_member_profile;
-        var left = position.left + 20;
-		
-        $(selector_member_profile_box).css({
-            'position': 'absolute',
-            'top': top + 'px',
-            'left': left + 'px',
-            //'padding': '1em',
-            //'background-color': '#f2f2f2'
-        });
-
-        console.log(e);
-		*/
+			member_profile_timeout_in = setTimeout(function(){
+			$(".member-profile-box:not([uid='"+ uid +"'][target_id='"+ target_id +"'])").remove();
+			
+			var url = "/library/api?call=getMemberProfile&uid=" + uid + "&target_id=" + target_id;
+			ajax_api(url, callback_show_member_profile);
+		}, 300);
     }
 	
 	function callback_show_member_profile( re ){
@@ -69,9 +44,11 @@ $(function(){
 	}
 	
 	function on_member_profile_leave(){	
+		clearTimeout( member_profile_timeout_in );
+	
 		member_profile_timeout = setTimeout(function(){
 			$(selector_member_profile_box).remove();
-		},1000);
+		},300);
 	}
 	
 	/*on_member_box_profile*/
