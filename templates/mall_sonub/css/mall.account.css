@@ -150,8 +150,9 @@
 }
 
 .member-form .row.data-set.month select, .member-form .row.data-set.day select, .member-form .row.data-set.year select{
+	height:40px;
 	width:100%;	
-	padding:10px;	
+	padding:0 10px;	
 	border:0;
 	border-right:1px solid #fff;
 	background-color:#f1f1f1;
