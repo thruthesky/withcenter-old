@@ -9,7 +9,7 @@
 .member-profile-box .triangle{
 	position:absolute;
 	top:-8px;
-	left:15px;
+	left:45%;
 	border-bottom:7px solid #afafaf;
 	border-left:7px solid transparent;
 	border-right:7px solid transparent;
@@ -18,27 +18,38 @@
 .member-profile-box .triangle.two{
 	position:absolute;
 	top:-7px;
-	left:15px;
+	left:45%;
 	border-bottom:7px solid #fff;
 	border-left:7px solid transparent;
 	border-right:7px solid transparent;
 }
 
-.member-profile-box img{
-	display:block;
-	width:100%;	
+.member-profile-box .row{	
+	display:block;	
 }
 
-.member-profile-box .row{	
-	display:inline-block;	
+.member-profile-box .row > span{	
+	display:block;
 }
 
 .member-profile-box .row .caption > a{
 	display: inline-block;
-	padding: 4px 10px 6px 10px;	
-	border-radius:2px;
+	width: 100%;
+	padding: 3px 10px 7px 10px;
+	margin-bottom: 5px;
+	border-radius: 2px;
 	background-color: #1886c5;
-	color:#fff;
+	color: #fff;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.member-profile-box .row:last-child .caption > a{
+	margin-bottom:0;
+}
+
+.member-profile-box {
+	width:120px;
 }
 
 .member-profile-box .row.user{
@@ -49,28 +60,35 @@
 }
 
 .member-profile-box .row.user .photo{
-	float:left;
+	/*float:left;*/
 	width:62px;
 	padding:2px;
+	margin:auto;
 	border:1px solid #cacaca;
 	border-radius:2px;
 	box-sizing:border-box;
 }
 
+.member-profile-box .row.user .photo img{
+	display:block;
+	width:100%;	
+}
+
 .member-profile-box .row.user .info{
-	height: 62px;
 	padding: 5px;
 	overflow: hidden;
-	box-sizing: border-box;  
+	box-sizing: border-box; 	
 }
 
 .member-profile-box .row.user .info .name{
 	font-size:1.2em;
 	font-weight:bold;
 	margin-bottom:5px;
+	text-align:center;
 }
 
 .member-profile-box .row.user .info .name > span{
+	display:block;
 	font-size:.8em;
 	font-weight:normal;	
 }
@@ -85,6 +103,17 @@
 	font-weight:bold;
 	color:blue;	
 	background-color:transparent;
+}
+
+.member-profile-box .row img{
+	position: relative;
+	top:1px;
+	width:auto;
+	margin-right: 4px;
+}
+
+.member-profile-box .row.message img{
+	top: 2px;		
 }
 
 .member-profile-box .row.view-profile .caption > a{	

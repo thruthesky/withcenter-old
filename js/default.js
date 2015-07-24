@@ -33,7 +33,7 @@ $(function(){
 		var h_member_profile = $('.member-profile').outerHeight() + 15;
 		var position = $(".member-profile[uid='"+re.uid+"'][target_id='"+re.target_id+"']").position();
         var top = position.top + h_member_profile;
-        var left = position.left + 10;
+        var left = position.left - 54;
 		
 		
 		$(".member-profile-box").css({
