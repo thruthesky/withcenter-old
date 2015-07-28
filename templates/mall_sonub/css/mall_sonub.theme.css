@@ -21,3 +21,6 @@ input, select, textarea{
 }
 
 
+.author.member-profile{
+	cursor:pointer;
+}
