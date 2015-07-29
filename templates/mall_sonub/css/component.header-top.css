@@ -127,8 +127,14 @@
 }
 /*eo nav.menu*/
 
+
+.layout > header .top .market .item .text{
+	color:yellow;
+	font-weight:bold;
+}
+
 /** 1px and above **/
-header table.menu-table td.market,
+header table.menu-table td.ask,
 header table.menu-table td.news,
 header table.menu-table td.music,
 header table.menu-table td.knowledge,
@@ -222,9 +228,9 @@ header table.menu-table td.search .item.more960{
 }
 
 @media all and ( min-width: 320px ) { /** 320px and above */
-    header table.menu-table td.ask {
+    /*header table.menu-table td.ask {
         display:table-cell;
-    }
+    }*/
 }
 
 
@@ -269,7 +275,7 @@ header table.menu-table td.search .item.more960{
 
 @media all and ( min-width: 640px ) { /* 640px and above */
 	header table.menu-table td.music,
-	header table.menu-table td.market,
+	header table.menu-table td.ask,
 	header table.menu-table td.knowledge,
 	header table.menu-table td.discussion {
 		display:table-cell;

@@ -13,18 +13,7 @@
 						</div>
 					</a>
 				</td>
-
-				<td class="market">
-					<a href="/">
-						<div class="item">
-							<div class="sprite"></div>
-							<div class="text">
-								<script>ln('Market,쇼핑몰');</script>
-							</div>
-						</div>
-					</a>
-				</td>
-
+			
 
 
 				<td class="ask">
@@ -124,7 +113,21 @@
 					</a>
 				</td>
 				{% endif %}
+			{% if logged_in %}
+				<td class="market">
+					<a href="/mall/item/add">
+						<div class="item">
+							<div class="sprite"></div>
+							<div class="text">
+								<script>ln('Post an Item,쇼핑몰');</script>
+							</div>
+						</div>
+					</a>
+				</td>
+			{% endif %}
+				
 				<td class="login">
+				
 					{% if logged_in %}
 						<a href="/member/update">
 							<div class="item user page">
