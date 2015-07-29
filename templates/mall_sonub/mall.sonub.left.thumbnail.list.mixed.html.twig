@@ -18,7 +18,9 @@ data.sidebar_post_thumbnail.first_image_thumbnail
 	{% set thumbnail = i.images.item_image_thumbnail[0].url_thumbnail %}
 	<a href='/mall/item/view?item_id={{ i.entity.id.value }}'>
 		<div class='item clearfix' >
-			<div class='photo'><img src='{{ thumbnail }}'/></div>
+			{% if thumbnail %}
+				<div class='photo'><img src='{{ thumbnail }}'/></div>
+			{% endif %}
 			<div class='info {{ language }}'>				
 				{{ i.entity.title.value }}
 			</div>
