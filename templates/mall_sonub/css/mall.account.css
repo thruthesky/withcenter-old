@@ -159,6 +159,10 @@
 	box-sizing:border-box;
 }
 
+.member-form .row.data-set.month select, .member-form .row.data-set.day select, .member-form .row.data-set.year select{
+	line-height:33px;
+}
+
 .member-form .row.data-set.year select{
 	border-right:0;
 }
