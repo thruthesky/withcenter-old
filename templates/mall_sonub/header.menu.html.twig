@@ -5,7 +5,7 @@
 {% endif %}
 <div class='bottom'>
 	<div class='inner clearfix'>
-	{% for menu in menus | slice (0,9) %}
+	{% for menu in menus | slice (0,10) %}
 		<a class='menu{{ category_id == menu.entity.id.value ? ' selected'}} {{ language }}' href='/mall/item/search?category_id={{ menu.entity.id.value }}'><script>ln("{{ menu.entity.name.value }}")</script><img src='/themes/withcenter/templates/mall_sonub/img/menu_selected.png'/></a>
 	{% endfor %}
 	</div>
