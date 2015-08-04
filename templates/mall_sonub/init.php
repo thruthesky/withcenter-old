@@ -40,7 +40,7 @@ if( $hook == 'page' ) {
 		*/
 
 	$variables['data']['sidebar_post_thumbnail_mixed'] = Item::getItemsWithImages( ['limit'=>'5','by'=>'created','order'=>'DESC' ] );
-
+	//di( $variables['data']['sidebar_post_thumbnail_mixed']['items'] );
 	$post_with_thumbnail = PostData::search([
 										'fid_of_first_image' => true,
 										'order_field' => 'created',
