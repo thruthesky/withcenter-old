@@ -63,6 +63,7 @@ if( $hook == 'page' ) {
 				$file_url['url_thumbnail'] = entity_load('image_style', 'thumbnail')->buildUrl($path);
 				$file_url['url_medium'] = entity_load('image_style', 'medium')->buildUrl($path);
 				$file_url['url_large'] = entity_load('image_style', 'large')->buildUrl($path);
+				$file_url['item_view'] = entity_load('image_style', 'item_view')->buildUrl($path);
 
 				$pwt[ $post->id() ]['first_image_thumbnail'] = $file_url;
 			}
