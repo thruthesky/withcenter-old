@@ -375,11 +375,13 @@ img.fake{
 .todays-pick section.grid.bottom .b .item-wrapper .item .photo img{
     position:absolute;
     left:0;
-    top:0;
+    top:-50%;
 }
 
 .todays-pick section.grid.bottom .b .item-wrapper .item .photo img.fake{
     position:relative;
+	left:0;
+	top:0;
 }
 
 .todays-pick section.grid.bottom .a .item{
