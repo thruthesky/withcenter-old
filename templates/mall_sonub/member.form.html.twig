@@ -1,7 +1,8 @@
 {% set member = data.member %}
 {% import dir_macro ~ '/html.html.twig' as html %}
 {{ html.error(data) }}
-{% if not data.error %}
+
+{# if not data.error#}
 	<form class='member-register-form member-form' method="post">
 		<fieldset>
 			<input type="hidden" name="mode" value="submit">
@@ -30,7 +31,7 @@
 				</div>
 				{{ html.row({ 'class':'username update', 'value':member.name.value, 'label':'User ID'}) }}			
 			{% else %}
-				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value': input.username  , 'label':'User ID', 'placeholder':'User ID'}) }}
+				{{ html.input({'type':'text','name':'username', 'id':'register-username', 'class':'username', 'value': input.username , 'label':'User ID', 'placeholder':'User ID'}) }}
 				{{ html.input({'type':'password','name':'password', 'id':'register-password', 'class':'password', 'value':'', 'label':'Password', 'placeholder':'Password'}) }}
 				{{ html.input({'type':'password','name':'confirm_password', 'id':'register-confirm_password', 'class':'confirm_password', 'value':'', 'label':'Confirm Password', 'placeholder':'Confirm Password'}) }}
 			{% endif %}
@@ -53,8 +54,8 @@
 
 			{{
 			html.radio('gender', 'Gender', [
-			{'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender },
-			{'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender }
+			{'id':'generM', 'label': 'Male', 'value': 'M', 'default': member.extra.gender | default( input.gender ) },
+			{'id':'generF', 'label': 'Female', 'value': 'F', 'default': member.extra.gender | default( input.gender ) }
 			])
 			}}
 
@@ -70,4 +71,4 @@
 			</div>
 		</fieldset>
 	</form>
-{% endif %}
+{# endif #}

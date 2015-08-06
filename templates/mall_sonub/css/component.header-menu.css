@@ -24,7 +24,7 @@ header .bottom .inner a.menu{
 	display:inline-block;
 	position:relative;
 	height:44px;
-	padding: 15px 13px;
+	padding: 15px 11px;
 	margin-bottom: 20px;
 	font-size:1.1em;
 	font-weight:bold;
@@ -42,7 +42,7 @@ header .bottom .inner a.menu.selected, header .bottom .inner a.menu.hover{
 	height:54px;
 	top:-5px;
 	padding: 20px 6px 20px 6px;
-	margin: 0 7px;
+	margin: 0 5px;
 	background-color:#888787;	
 	box-sizing:border-box;
 }
