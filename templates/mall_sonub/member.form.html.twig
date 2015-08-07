@@ -4,6 +4,7 @@
 
 {# if not data.error#}
 	<form class='member-register-form member-form' method="post">
+		{% include 'modules/mall/templates/mall.admin.commands.html.twig' %}
 		<fieldset>
 			<input type="hidden" name="mode" value="submit">
 			<input type="hidden" name="fid" value="">			

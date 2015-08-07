@@ -1,6 +1,6 @@
 {% import dir_macro ~ '/html.html.twig' as html %}
 {{ html.error(data) }}
-{% if not data.error %}
+{# if not data.error #}
 	<div class='form-wrapper login'>
 		<div class='title'>{{ ko ? '로그인' : 'Sign in' }}</div>
 		<form class='user-login-form member-form' method="post">
@@ -16,4 +16,4 @@
 			</fieldset>
 		</form>
 	</div>
-{% endif %}
+{# endif #}
