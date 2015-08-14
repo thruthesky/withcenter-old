@@ -24,8 +24,8 @@ header .bottom .inner a.menu{
 	display:inline-block;
 	position:relative;
 	height:44px;
-	padding: 15px 11px;
-	margin-bottom: 20px;
+	padding: 15px 6px;	
+	margin: 0 5px 20px 5px;
 	font-size:1.1em;
 	font-weight:bold;
 	color:#ffffff;	
