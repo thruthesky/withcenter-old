@@ -186,9 +186,10 @@
 				{% endif %}
 
 			</li>
-			<li><a href="/"><script>ln('Market,쇼핑몰');</script></a></li>
-			<li><a href="/mall/item/add"><script>ln('Seller Page,판매자 페이지');</script></a></li>
-
+			{% if logged_in %}
+				<li><a href="/mall/item/add"><script>ln('Post an Item,판매자 페이지');</script></a></li>
+				<li><a href="/mall/item/search?user_id={{ user.id }}"><script>ln('My Items,My Items');</script></a></li>
+			{% endif %}
 			<li><a href="/post/ask"><script>ln('Ask,회원가입');</script></a></li>
 			<li><a href="/post/knowledge"><script>ln('Knowledge,지식인');</script></a></li>
 			<li><a href="/post/discussion"><script>ln('Discussion,자유토론');</script></a></li>
