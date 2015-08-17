@@ -32,7 +32,7 @@ header .logo-and-search form.search input{
 header .logo-and-search form.search input[type='text']{
 	height:33px;
 	width:100%;
-	padding:9px 12px 6px 12px;	
+	padding:6px 12px 9px 12px;	
 }
 
 header .logo-and-search form.search .submit-wrapper{
