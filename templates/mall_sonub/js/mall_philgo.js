@@ -16,8 +16,8 @@ $(function(){
 	
 	$("body").on( "click",".layout > header .top table.menu-table .item.more", callback_slide_nav_menu );
 	
-	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class );
-	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class );
+	$("body").on( "mouseenter","header .bottom .inner a.menu", callback_menu_class_in );
+	$("body").on( "mouseleave","header .bottom .inner a.menu", callback_menu_class_out );
 
 	$("body").on( "keyup",".member-form .row.data-set > .text input[name='confirm_password']", callback_confirm_password );
 	$("body").on( "keyup",".member-form .row.data-set > .text input[name='password']", callback_confirm_password );
@@ -52,12 +52,22 @@ function callback_slide_nav_menu(){
 	$("header .top nav.menu").slideToggle();
 }
 
-function callback_menu_class(){	
+var menu_timout_in;
+
+function callback_menu_class_in(){	
 	$this = $(this);		
-	if( $this.hasClass('add') ) return;
-	if( $this.hasClass('selected') ) return;
+	menu_timout_in = setTimeout( function(){
+		if( $this.hasClass('add') ) return;
+		if( $this.hasClass('selected') ) return;
+		$this.addClass('hover');	
+	}
+	, 300 );
+}
+
+function callback_menu_class_out(){	
+	clearTimeout( menu_timout_in );
+	$this = $(this);
 	if( $this.hasClass('hover') ) $this.removeClass('hover');
-	else $this.addClass('hover');	
 }
 
 function getInitialVariables(){
